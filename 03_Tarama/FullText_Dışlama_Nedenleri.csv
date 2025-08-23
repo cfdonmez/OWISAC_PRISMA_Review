@@ -1,0 +1,3 @@
+record_id,reason_code,reason_text
+IEEE-2022-07890,N5,"Outcome metrics not reported (no SINR/EVM/BER or MTF/Strehl/EE50)"
+SD-2019-99887,N4,"LoS-only evaluation; no NLoS claim or generalization"

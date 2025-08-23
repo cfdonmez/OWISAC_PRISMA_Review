@@ -1,0 +1,7 @@
+record_id,title,venue,year,stage,decision,exclusion_code,notes
+IEEE-2021-01234,"Programmable metasurface for NLoS optical links",IEEE JSTQE,2021,T/A,Include,,NLoS+RIS; metrics=SINR,MTF
+OSA-2020-04567,"OPA-based optical beam steering under turbulence",Optics Express,2020,T/A,Include,,OPA; ASM; metrics=MTF
+SD-2019-99887,"Indoor VLC LoS throughput analysis",Elsevier,2019,T/A,Exclude,N4,LoS only; NLoS genellemesi yok
+arXiv-2024-12345,"Holographic calibration for SLM",arXiv,2024,T/A,Maybe,,Kalibrasyon odaklı; metrik belirsiz → Full text bak
+IEEE-2022-07890,"RIS-aided optical ISAC survey",IEEE Access,2022,Full,Exclude,N5,İstatistik yok; yalnız anlatı
+OSA-2021-03321,"Quantization-aware phase optimization",Optics Letters,2021,Full,Include,,1–2 bit sonuç; SINR/MTF var
