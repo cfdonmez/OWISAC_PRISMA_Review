@@ -9,12 +9,7 @@
 ---
 
 ## IEEE Xplore — Advanced Search (All Metadata)
-(("optical integrated sensing and communication" OR "optical ISAC" OR OW-ISAC)
- AND ("reconfigurable intelligent surface" OR RIS OR metasurface OR "programmable metasurface"
-      OR "spatial light modulator" OR SLM OR "optical phased array" OR OPA)
- AND ("non-line-of-sight" OR NLoS OR "beyond line of sight")
- AND (turbulence OR Kolmogorov OR Rytov OR scintillation OR Fresnel OR "angular spectrum"))
- NOT (fiber OR fibre)
+("optical integrated sensing and communication" OR "optical ISAC" OR OW-ISAC AND ("reconfigurable intelligent surface" OR RIS OR metasurface OR "programmable metasurface") AND ("non-line-of-sight" OR NLoS OR "beyond line of sight") AND (turbulence OR Kolmogorov OR Rytov OR scintillation OR Fresnel OR "angular spectrum") NOT fiber NOT fibre AND Language:English AND (Content_Type:Articles OR Content_Type:Conferences OR Content_Type:Reviews) )
 
 ---
 
