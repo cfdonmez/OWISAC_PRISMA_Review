@@ -7,3 +7,4 @@ timestamp,platform,interface,query,filters,results_count,notes
 2025-08-20 10:00,Optica Publishing,Web,Core + Algorithm block,"2005–2025; EN; NOT fiber",,planned
 2025-08-20 10:00,ScienceDirect,Web,Core + Algorithm block,"2005–2025; EN; NOT fiber",,planned
 2025-08-20 10:00,arXiv,Web,Core + Algorithm block,"2005–2025; EN; NOT fiber",,planned
+2025-08-23 16:15,IEEE Xplore,"(""optical integrated sensing and communication"" OR ""optical ISAC"" OR OW-ISAC AND (""reconfigurable intelligent surface"" OR RIS OR metasurface OR ""programmable metasurface"") AND (""non-line-of-sight"" OR NLoS OR ""beyond line of sight"") AND (turbulence OR Kolmogorov OR Rytov OR scintillation OR Fresnel OR ""angular spectrum"") NOT fiber NOT fibre AND Language:English AND (Content_Type:Articles OR Content_Type:Conferences OR Content_Type:Reviews) )","Yıl: 2005–2025, Dil: English, Tür: Article/Conference/Review, NOT fiber/fibre",18
