@@ -1,52 +1,58 @@
-Publication,Title,Count
-IEEE Transactions on Wireless Communications,"['Optical Wireless Integrated Sensing and Communication Based on Optical Phased Array: Performance Metric and Optimal Beamforming', 'Optical Wireless Integrated Sensing and Communication Based on EADO-OFDM: A Flexible Resource Allocation Perspective', 'Optical Integrated Sensing and Communication System Based on Combination of OIRS and PD Array for Mobile Scenarios', 'Opportunistic Reuse of Spatial-Temporal Resources in Multi-User ISAC Systems for Value of Service Maximization', 'Joint beamforming and UAV trajectory optimization for covert communications in ISAC networks']",5
-Journal of Lightwave Technology,"['Fully integrated FMCW LiDAR optical engine on a single silicon chip', 'Hybrid integrated frequency-modulated continuous-wave laser with synchronous tuning', 'Compact optical beamforming chip using broadband continuously tunable delay lines', 'Microring optical phase-shifters with low driving-voltage, low insertion loss, and small residual amplitude modulation']",4
-IEEE Photonics Technology Letters,"['Bidirectional retroreflective optical ISAC using time division duplexing and clipped OFDM', 'Full-Duplex RO-ISAC System: Wavelength Division Duplexing and Hybrid Waveform Design', 'Co-existence of SiPh sensing link and Real World Traffic over 100 m FSO link for 6G deployments']",3
-IEEE Journal of Selected Topics in Quantum Electronics,"['Large-scale and broadband silicon nitride optical phased arrays', 'Indium phosphide photonic integrated circuit transceiver for FMCW LiDAR', 'Avalanche photodiodes with dual multiplication layers and ultra-high responsivity-bandwidth products for FMCW LiDAR system applications']",3
-IEEE Internet of Things Journal,"['Free space optical integrated sensing and communication based on DCO-OFDM: performance metrics and resource allocation', 'Optical integrated sensing and communication with light-emitting diode', 'PAM waveform design for joint communication and sensing based on visible light']",3
-Optics Express,"['Phase-locked arrays of surface-emitting graded-photonic-heterostructure terahertz semiconductor lasers', 'Sub-100-nm precision distance measurement by means of all-fiber photonic microwave mixing', 'Directly modulated optical negative feedback lasers for long-range FMCW LiDAR']",3
-2024 Asia Communications and Photonics Conference (ACP) and International Conference on Information Photonics and Optical Communications (IPOC),"['Retroreflective optical ISAC supporting 3D positioning in indoor environments', 'Phase-Coded FMCW for Optical Integrated Sensing and Communication']",2
-IEEE Communications Letters,"['Free space optical integrated sensing and communication based on LFM and CPM', 'Pulse sequence sensing and pulse position modulation for optical integrated sensing and communication']",2
-Applied Sciences,"['Optical beamforming networks for millimeter-wave wireless communications', 'Road infrastructure challenges faced by automated driving: A review']",2
-Optica,"['Linear programmable nanophotonic processors', 'High-gain optical parametric amplification with a continuous-wave pump using a domain-engineered thin-film lithium niobate waveguide']",2
-Near-Earth Laser Communications, Second Edition,['Near-earth laser communications'],1
-Laser Recording and Information Handling Technology I,['Laser scanning techniques'],1
-Light: Science & Applications,['Physical twinning for joint encoding-decoding optimization in computational optics: a review'],1
-Micromachines,['Beam steering technology of optical phased array based on silicon photonic integrated chip'],1
-Molecules,['Progress in luminescent materials based on europium (III) complexes of β-diketones and organic carboxylic acids'],1
-Nature Communications,['Photonic-electronic integrated circuit-based coherent LiDAR engine'],1
-2023 21st International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks (WiOpt),['Optical Integrated Sensing and Communication for Cooperative Mobile Robotics: Design and Experiments'],1
-Laser & Photonics Reviews,['Integrated Light Sources Based on Micro‐Ring Resonators for Chip‐Based LiDAR'],1
-Opto-Electronic Engineering,['Review of nonlinearity correction of frequency modulated continuous wave LiDAR measurement technology'],1
-Photonic Network Communications,['Performance analysis and comparison of optical signal processing beamforming networks: a survey'],1
-TENCON 2024-2024 IEEE Region 10 Conference (TENCON),['Retroreflective Optical ISAC Using OFDM and Corner Cube Reflector'],1
-Wen and yu, jianjun, A Photonics-Aided Integrated Sensing and Communication System in the W-Band Based on Integrated Waveforms,['A Photonics-Aided Integrated Sensing and Communication System in the W-Band Based on Integrated Waveforms'],1
-arXiv e-prints,['Optical ISAC: Fundamental Performance Limits and Transceiver Design'],1
-arXiv preprint arXiv:2312.13640,['Optical integrated sensing and communication: Architectures, potentials and challenges'],1
-arXiv preprint arXiv:2406.15056,['Continuous-aperture array (CAPA)-based wireless communications: Capacity characterization'],1
-arXiv preprint arXiv:2408.11792,['Optical ISAC: Fundamental Performance Limits and Transceiver Design'],1
-arXiv preprint arXiv:2504.06830,['Integrated sensing and communications over the years: An evolution perspective'],1
-arXiv preprint arXiv:2504.16498,['LiDAL-Assisted RLNC-NOMA in OWC Systems'],1
-Optical Engineering,['Technical concepts of automotive LiDAR sensors: a review'],1
-IEEE Transactions on Electron Devices,['Optical and communication performance investigation of UV and DUV light-stimulated quantum dots'],1
-Journal of Marine Science and Engineering,['Posterior Probability-Based Symbol Detection Algorithm for CPM in Underwater Acoustic Channels'],1
-Advanced Materials,['Dynamic control of light direction enabled by stimuli‐responsive liquid crystal gratings'],1
-2024 IEEE 2nd International Conference on Control, Electronics and Computer Technology (ICCECT),['A Study of Optimization Strategies of Autonomous Vehicle Related Technology'],1
-2024 IEEE International Conference on Communications Workshops (ICC Workshops),['Realization of RF Signal over Bidirectional Optical Wireless Communication Links'],1
-2024 International Conference on Broadband Communications for Next Generation Networks and Multimedia Applications (CoBCom),['Joint Communication and Sensing Prospects: Potential Through Visible Light'],1
-2024 Joint European Conference on Networks and Communications & 6G Summit (EuCNC/6G Summit),['Implementation of Reconfigurable 149Mbps TDC-Based PPM Transceiver'],1
-2025 IEEE Wireless Communications and Networking Conference (WCNC),['Integrated Sensing and Communication for UAV Trajectory Optimization in Mixed FSO-RF Networks in Dynamic Weather Conditions'],1
-ACS Photonics,['Microcavity Raman laser-based FMCW LiDAR with enhanced echo sensitivity'],1
-APL Photonics,['Directly modulated FMCW tunable laser with highly linear frequency chirp and narrow linewidth'],1
-Advanced Functional Materials,['High‐Speed Flexible Near‐Infrared Organic Photodetectors for Self‐Powered Optical Integrated Sensing and Communications'],1
-China Communications,['Integrated optical true time delay phased array antenna systems'],1
-IEEE Vehicular Technology Magazine,['Free space optical communications for intelligent transportation systems: potentials and challenges'],1
-Chinese Optics Letters,['Integrated optical delay lines: a review and perspective'],1
-Communications Engineering,['Active optical phased array integrated within a micro-cantilever'],1
-Computational Optical Sensing and Imaging,['Effect of Limited Phase Shift on Single-Pixel Imaging using Carrier-Depletion Silicon Photonic Phased Array'],1
-GLOBECOM 2024-2024 IEEE Global Communications Conference,['Adaptive Resource Allocation in ADO-OFDM for Optical Wireless Integrated Sensing and Communication'],1
-High Contrast Metastructures IV,['Virtually image phased array based on Bragg reflector waveguide for large-port optical switching'],1
-ICC 2024-IEEE International Conference on Communications,['Power allocation for OFDM-based free space optical integrated sensing and communication'],1
-IEEE Journal on Selected Areas in Communications,['Integrated Positioning and Communication Relying on Wireless Optical OFDM'],1
-IEEE Photonics Journal,['LiRF: Light-based Wireless Communications Supporting Ubiquitous Radio Frequency Signals'],1
-电子与信息学报,"['Integrated sensing, communication, computation, and intelligence towards IoT: Key technologies and future directions']",1
+Publication,Title,Count,Date,Time,Source,Type,Query,DateRange,SearchCount,Note
+IEEE Transactions on Wireless Communications,"['Optical Wireless Integrated Sensing and Communication Based on Optical Phased Array: Performance Metric and Optimal Beamforming', 'Optical Wireless Integrated Sensing and Communication Based on EADO-OFDM: A Flexible Resource Allocation Perspective', 'Optical Integrated Sensing and Communication System Based on Combination of OIRS and PD Array for Mobile Scenarios', 'Opportunistic Reuse of Spatial-Temporal Resources in Multi-User ISAC Systems for Value of Service Maximization', 'Joint beamforming and UAV trajectory optimization for covert communications in ISAC networks']",5,,,,,,,
+Journal of Lightwave Technology,"['Fully integrated FMCW LiDAR optical engine on a single silicon chip', 'Hybrid integrated frequency-modulated continuous-wave laser with synchronous tuning', 'Compact optical beamforming chip using broadband continuously tunable delay lines', 'Microring optical phase-shifters with low driving-voltage, low insertion loss, and small residual amplitude modulation']",4,,,,,,,
+IEEE Photonics Technology Letters,"['Bidirectional retroreflective optical ISAC using time division duplexing and clipped OFDM', 'Full-Duplex RO-ISAC System: Wavelength Division Duplexing and Hybrid Waveform Design', 'Co-existence of SiPh sensing link and Real World Traffic over 100 m FSO link for 6G deployments']",3,,,,,,,
+IEEE Journal of Selected Topics in Quantum Electronics,"['Large-scale and broadband silicon nitride optical phased arrays', 'Indium phosphide photonic integrated circuit transceiver for FMCW LiDAR', 'Avalanche photodiodes with dual multiplication layers and ultra-high responsivity-bandwidth products for FMCW LiDAR system applications']",3,,,,,,,
+IEEE Internet of Things Journal,"['Free space optical integrated sensing and communication based on DCO-OFDM: performance metrics and resource allocation', 'Optical integrated sensing and communication with light-emitting diode', 'PAM waveform design for joint communication and sensing based on visible light']",3,,,,,,,
+Optics Express,"['Phase-locked arrays of surface-emitting graded-photonic-heterostructure terahertz semiconductor lasers', 'Sub-100-nm precision distance measurement by means of all-fiber photonic microwave mixing', 'Directly modulated optical negative feedback lasers for long-range FMCW LiDAR']",3,,,,,,,
+2024 Asia Communications and Photonics Conference (ACP) and International Conference on Information Photonics and Optical Communications (IPOC),"['Retroreflective optical ISAC supporting 3D positioning in indoor environments', 'Phase-Coded FMCW for Optical Integrated Sensing and Communication']",2,,,,,,,
+IEEE Communications Letters,"['Free space optical integrated sensing and communication based on LFM and CPM', 'Pulse sequence sensing and pulse position modulation for optical integrated sensing and communication']",2,,,,,,,
+Applied Sciences,"['Optical beamforming networks for millimeter-wave wireless communications', 'Road infrastructure challenges faced by automated driving: a review']",2,,,,,,,
+Optica,"['Linear programmable nanophotonic processors', 'High-gain optical parametric amplification with a continuous-wave pump using a domain-engineered thin-film lithium niobate waveguide']",2,,,,,,,
+Near-Earth Laser Communications, Second Edition,['Near-earth laser communications'],1,,,,,,,
+Laser Recording and Information Handling Technology I,['Laser scanning techniques'],1,,,,,,,
+Light: Science & Applications,"['Physical twinning for joint encoding-decoding optimization in computational optics: a review']",1,,,,,,,
+Micromachines,"['Beam steering technology of optical phased array based on silicon photonic integrated chip']",1,,,,,,,
+Molecules,"['Progress in luminescent materials based on europium (III) complexes of β-diketones and organic carboxylic acids']",1,,,,,,,
+Nature Communications,"['Photonic-electronic integrated circuit-based coherent LiDAR engine']",1,,,,,,,
+2023 21st International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks (WiOpt),['Optical Integrated Sensing and Communication for Cooperative Mobile Robotics: Design and Experiments'],1,,,,,,,
+Laser & Photonics Reviews,"['Integrated Light Sources Based on Micro‐Ring Resonators for Chip‐Based LiDAR']",1,,,,,,,
+Opto-Electronic Engineering,"['Review of nonlinearity correction of frequency modulated continuous wave LiDAR measurement technology']",1,,,,,,,
+Photonic Network Communications,"['Performance analysis and comparison of optical signal processing beamforming networks: a survey']",1,,,,,,,
+TENCON 2024-2024 IEEE Region 10 Conference (TENCON),"['Retroreflective Optical ISAC Using OFDM and Corner Cube Reflector']",1,,,,,,,
+Wen and yu, jianjun, A Photonics-Aided Integrated Sensing and Communication System in the W-Band Based on Integrated Waveforms,"['A Photonics-Aided Integrated Sensing and Communication System in the W-Band Based on Integrated Waveforms']",1,,,,,,,
+arXiv e-prints,"['Optical ISAC: Fundamental Performance Limits and Transceiver Design']",1,,,,,,,
+arXiv preprint arXiv:2312.13640,"['Optical integrated sensing and communication: Architectures, potentials and challenges']",1,,,,,,,
+arXiv preprint arXiv:2406.15056,"['Continuous-aperture array (CAPA)-based wireless communications: Capacity characterization']",1,,,,,,,
+arXiv preprint arXiv:2408.11792,"['Optical ISAC: Fundamental Performance Limits and Transceiver Design']",1,,,,,,,
+arXiv preprint arXiv:2504.06830,"['Integrated sensing and communications over the years: An evolution perspective']",1,,,,,,,
+arXiv preprint arXiv:2504.16498,"['LiDAL-Assisted RLNC-NOMA in OWC Systems']",1,,,,,,,
+Optical Engineering,"['Technical concepts of automotive LiDAR sensors: a review']",1,,,,,,,
+IEEE Transactions on Electron Devices,"['Optical and communication performance investigation of UV and DUV light-stimulated quantum dots']",1,,,,,,,
+Journal of Marine Science and Engineering,"['Posterior Probability-Based Symbol Detection Algorithm for CPM in Underwater Acoustic Channels']",1,,,,,,,
+Advanced Materials,"['Dynamic control of light direction enabled by stimuli‐responsive liquid crystal gratings']",1,,,,,,,
+2024 IEEE 2nd International Conference on Control, Electronics and Computer Technology (ICCECT),"['A Study of Optimization Strategies of Autonomous Vehicle Related Technology']",1,,,,,,,
+2024 IEEE International Conference on Communications Workshops (ICC Workshops),"['Realization of RF Signal over Bidirectional Optical Wireless Communication Links']",1,,,,,,,
+2024 International Conference on Broadband Communications for Next Generation Networks and Multimedia Applications (CoBCom),"['Joint Communication and Sensing Prospects: Potential Through Visible Light']",1,,,,,,,
+2024 Joint European Conference on Networks and Communications & 6G Summit (EuCNC/6G Summit),"['Implementation of Reconfigurable 149Mbps TDC-Based PPM Transceiver']",1,,,,,,,
+2025 IEEE Wireless Communications and Networking Conference (WCNC),"['Integrated Sensing and Communication for UAV Trajectory Optimization in Mixed FSO-RF Networks in Dynamic Weather Conditions']",1,,,,,,,
+ACS Photonics,"['Microcavity Raman laser-based FMCW LiDAR with enhanced echo sensitivity']",1,,,,,,,
+APL Photonics,"['Directly modulated FMCW tunable laser with highly linear frequency chirp and narrow linewidth']",1,,,,,,,
+Advanced Functional Materials,"['High‐Speed Flexible Near‐Infrared Organic Photodetectors for Self‐Powered Optical Integrated Sensing and Communications']",1,,,,,,,
+China Communications,"['Integrated optical true time delay phased array antenna systems']",1,,,,,,,
+IEEE Vehicular Technology Magazine,"['Free space optical communications for intelligent transportation systems: potentials and challenges']",1,,,,,,,
+Chinese Optics Letters,"['Integrated optical delay lines: a review and perspective']",1,,,,,,,
+Communications Engineering,"['Active optical phased array integrated within a micro-cantilever']",1,,,,,,,
+Computational Optical Sensing and Imaging,"['Effect of Limited Phase Shift on Single-Pixel Imaging using Carrier-Depletion Silicon Photonic Phased Array']",1,,,,,,,
+GLOBECOM 2024-2024 IEEE Global Communications Conference,"['Adaptive Resource Allocation in ADO-OFDM for Optical Wireless Integrated Sensing and Communication']",1,,,,,,,
+High Contrast Metastructures IV,"['Virtually image phased array based on Bragg reflector waveguide for large-port optical switching']",1,,,,,,,
+ICC 2024-IEEE International Conference on Communications,"['Power allocation for OFDM-based free space optical integrated sensing and communication']",1,,,,,,,
+IEEE Journal on Selected Areas in Communications,"['Integrated Positioning and Communication Relying on Wireless Optical OFDM']",1,,,,,,,
+IEEE Photonics Journal,"['LiRF: Light-based Wireless Communications Supporting Ubiquitous Radio Frequency Signals']",1,,,,,,,
+电子与信息学报,"['Integrated sensing, communication, computation, and intelligence towards IoT: Key technologies and future directions']",1,,,,,,,
+,,,"2025-08-23","14:00","IEEE Xplore","Web","Core OWISAC+OPA/RIS+NLoS+turbulence","2005–2025; EN; NOT fiber",34,"first run"
+,,,"2025-08-23","14:15","Optica Publishing","Web","Core query","2005–2025; EN; NOT fiber",12,"first run"
+,,,"2025-08-23","14:30","ScienceDirect","Web","Core query","2005–2025; EN; NOT fiber",18,"first run"
+,,,"2025-08-23","14:45","arXiv","Web","Core query","2005–2025; EN; NOT fiber",6,"first run"
+,,,"2025-08-23","15:00","IEEE Xplore","Web","Core+Algorithm","2005–2025; EN; NOT fiber",5,"algorithm filter"
+,,,"2025-08-23","15:15","Optica Publishing","Web","Core+Algorithm","2005–2025; EN; NOT fiber",3,"algorithm filter"
