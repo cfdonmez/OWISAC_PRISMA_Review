@@ -1,7 +1,9 @@
 record_id,title,venue,year,stage,decision,exclusion_code,notes
-IEEE-2021-01234,"Programmable metasurface for NLoS optical links",IEEE JSTQE,2021,T/A,Include,,NLoS+RIS; metrics=SINR,MTF
-OSA-2020-04567,"OPA-based optical beam steering under turbulence",Optics Express,2020,T/A,Include,,OPA; ASM; metrics=MTF
-SD-2019-99887,"Indoor VLC LoS throughput analysis",Elsevier,2019,T/A,Exclude,N4,LoS only; NLoS genellemesi yok
-arXiv-2024-12345,"Holographic calibration for SLM",arXiv,2024,T/A,Maybe,,Kalibrasyon odaklı; metrik belirsiz → Full text bak
-IEEE-2022-07890,"RIS-aided optical ISAC survey",IEEE Access,2022,Full,Exclude,N5,İstatistik yok; yalnız anlatı
-OSA-2021-03321,"Quantization-aware phase optimization",Optics Letters,2021,Full,Include,,1–2 bit sonuç; SINR/MTF var
+10.1109/OJCOMS.2025.3553813,"Empowering MIMO-FSO Systems: RIS Technology for Enhanced Performance in Challenging Conditions","OJCOMS",2025,Full,Exclude,S2,"FSO+RIS+BER/OP/Capacity var ama ASM/Fresnel/RS/PO yok; istatistiksel kanal + pointing error modeli var; NLoS enerji bütçesi verilmemiş"
+10.1109/JLT.2022.3162627,"Evaluation of Reconfigurable Intelligent Surface-Assisted Underwater Wireless Optical Communication System","Journal of Lightwave Technology",2022,Full,Exclude,S2,"UWOC bağlamında RIS+NLoS/engel; BER/OP var ama ASM/Fresnel/RS/PO yok"
+10.1098/rspa.2020.0162,"Optical wireless communications for cyber-secure ubiquitous wireless networks","Proceedings of the Royal Society A",2020,Full,Exclude,S1,"Genel OWC güvenlik makalesi; OPA/SLM/RIS yok; NLoS-FSO modeli/metrikleri yok"
+10.1515/nanoph-2023-0646,"Language-controllable programmable metasurface empowered by large language models","Nanophotonics",2024,Full,Exclude,N1,"Metasurface ~5.5 GHz RF; optik FSO değil"
+bai+4.pdf,"Unknown (partial reference-only file)","",,T/A,Maybe,,"Dosya yalnızca kaynakça içeriyor; başlık/özet/metot yok; full-text gerekli"
+Hodge2020-URSI,"Intelligent Time-Varying Metasurface Transceiver for Index Modulation in 6G Wireless Networks","URSI GASS",2020,T/A,Exclude,N1,"6G/RF odaklı IM verici; optik FSO değil"
+10.1109/JLT.2025.3601586,"Dynamic Target Localization and Optical Link Maintenance Using a 2D Beam Scanning System for IoT Connectivity","Journal of Lightwave Technology",2025,Full,Exclude,S1,"LoS-only experiment with retroreflector; no OPA/SLM/RIS; no ASM/Fresnel model"
+10.1109/TVT.2025.3593025,"Topological Arrangement Optimization of NUPA for Multi-User Near-Field Communications","IEEE Transactions on Vehicular Technology",2025,Full,Exclude,N1,"RF/mmWave (60 GHz) MU-MISO; optik ISAC kapsamı dışı"
