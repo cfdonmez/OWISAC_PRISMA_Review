@@ -1,0 +1,9 @@
+record_id,lambda_nm,wavelength_band,geometry_type,Tx_aperture_mm,RIS_size_cm,Rx_aperture_mm,device,phase_bits,metrics_comm,metrics_sense,prop_model,turbulence,validation,notes
+10.1109/OJCOMS.2025.3553813,,,,,,,"metasurface",,"BER|OP|Capacity",,,"",y,sim,"RIS+FSO; istatistiksel GG+pointing; ASM yok"
+10.1109/JLT.2022.3162627,,,,,,,"metasurface",,"BER|OP|Capacity",,,"",y,sim,"UWOC+RIS; ASM yok; obstacle bypass modeli"
+10.1098/rspa.2020.0162,,,,,,,,,"",,,"",,,"OWC security perspective; no OPA/RIS; no metrics"
+10.1515/nanoph-2023-0646,,,,,,,"metasurface",,"",,,"",,,"RF-band metasurface; not optical"
+bai+4.pdf,,,,,,,,,"",,,"",,,"File incomplete; only references; full text needed"
+Hodge2020-URSI,,,,,,,"metasurface",,"",,,"",,,"RF/6G metasurface IM; not optical"
+10.1109/JLT.2025.3601586,1555,C-band,LoS,,,"0.04",,"","BER|Data rate",,,"",n,lab,"1550 nm VCSEL system; LoS only; BER–Gbps reported"
+10.1109/TVT.2025.3593025,,,,,,,,,"",,,"",,,"RF 60 GHz MU-MISO; not optical ISAC"
