@@ -37,7 +37,6 @@ jobs:
           ############ ROOT FILES ############
           write_if_missing "README.md" <<'EOF'
 # Placeholder
-This README will be replaced by your existing one or edited later.
 EOF
 
           write_if_missing "LICENSE" <<'EOF'
@@ -193,3 +192,4 @@ EOF
           else
             echo "No changes to commit."
           fi
+
