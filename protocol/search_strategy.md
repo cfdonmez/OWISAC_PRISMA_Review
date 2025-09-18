@@ -1,6 +1,12 @@
 # Search Strategy — Snapshot 2025-09-18 (UTC+03)
 Databases: IEEE Xplore, Scopus, Web of Science, Optica (OE/OL), arXiv (physics.optics, eess.SP); GS for snowballing only.
 
+## Elicit — elicit_v1_2025-09-18
+Query: ("optical phased array" OR OPA) AND … [full query]
+Filters: Year ≥ 2019; English; Article/Conf/Preprint
+Hits returned: 578
+
+
 ## IEEE Xplore (All Metadata)
 QUERY_ID: ieee_v1_2025-09-18
 ("optical phased array" OR OPA) AND (RIS OR metasurface OR "intelligent reflecting surface")
