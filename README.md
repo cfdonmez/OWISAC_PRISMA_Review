@@ -275,7 +275,7 @@ We auto-generate counts and synthesis tables from the CSVs:
   Emits pillar coverage, metrics coverage, hardware-awareness, and turbulence parameter summaries under `results/synthesis_tables/`.
 
 For convenience, use the `Makefile`:
-```bash
+
 make all        # validate + prisma + synth
 make validate   # schema & row checks
 make prisma     # update PRISMA counts
