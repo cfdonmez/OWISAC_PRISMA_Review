@@ -1,7 +1,7 @@
 name: Scaffold repo structure
 
 on:
-  workflow_dispatch: {}   # run manually from Actions tab
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -18,24 +18,23 @@ jobs:
         run: |
           set -euo pipefail
 
-          # helper: write file only if missing
+          # write the stdin payload to $1 if the file does not exist
           write_if_missing () {
-            local path="$1"; shift
+            local path="$1"
             if [ ! -f "$path" ]; then
               mkdir -p "$(dirname "$path")"
-              cat > "$path" <<'EOF'
-$CONTENT$
-EOF
+              # read here-doc from stdin and write to file
+              cat > "$path"
             fi
           }
 
-          # helper: touch .gitkeep in empty dirs
+          # touch .gitkeep in an empty dir
           keep () {
             mkdir -p "$1"
             : > "$1/.gitkeep"
           }
 
-          # ---- root files ----
+          ############ ROOT FILES ############
           write_if_missing "README.md" <<'EOF'
 # Placeholder
 This README will be replaced by your existing one or edited later.
@@ -50,7 +49,7 @@ EOF
 Describe supplementary figures/tables here.
 EOF
 
-          # ---- data/ ----
+          ############ data/ ############
           write_if_missing "data/included_studies.csv" <<'EOF'
 record_id,doi_or_id,venue,year,title,authors,SRC,TRACE,architecture,channel_regime,wavelength_nm,primary_outcome,task_domain,data_availability,opa_N_elements,opa_pitch_um,opa_phase_bits,opa_scan_range_deg,opa_scan_rate_hz,ris_size_elems,ris_lattice,ris_phase_states,ris_response_ms,ris_fill_factor,z_total_m,nlos_geometry,Cn2,r0_m,rytov_var,regime,pillar_WD_JD,pillar_RC_PR_T,pillar_BN_RIS,pillar_RPB_Kol,pillar_HW_Q_CTRL,optimizer,training_signal,snr_db,sinr_db,ber,evm_pct,psl_db,islr_db,hpbw_deg,contrast,roc_auc,crb_unit,runtime_s,mem_gb,baselines_present,realism_score,rob_overall,normalization_notes,notes
 EOF
@@ -63,7 +62,7 @@ EOF
 date,source,query_id,hits,included_phase1,included_phase2,notes
 EOF
 
-          # ---- protocol/ ----
+          ############ protocol/ ############
           write_if_missing "protocol/prisma_protocol.md" <<'EOF'
 # PRISMA-P Protocol (Placeholder)
 Register OSF/PROSPERO details here.
@@ -92,7 +91,7 @@ EOF
 List normalized exclusion codes here.
 EOF
 
-          # ---- results/ ----
+          ############ results/ ############
           write_if_missing "results/prisma_flow_diagram.png" <<'EOF'
 Placeholder for PRISMA flow diagram image. Replace with the real PNG.
 EOF
@@ -130,7 +129,7 @@ EOF
 reason,count
 EOF
 
-          # ---- scripts/analysis/ ----
+          ############ scripts/analysis/ ############
           write_if_missing "scripts/analysis/validate_included_studies.py" <<'EOF'
 #!/usr/bin/env python3
 # Minimal placeholder: schema checks to be implemented.
@@ -162,7 +161,7 @@ EOF
 print("make_prisma_flow: placeholder")
 EOF
 
-          # ---- .github/workflows/ ----
+          ############ .github/workflows/ ############
           write_if_missing ".github/workflows/validate-and-build.yml" <<'EOF'
 name: Validate & Build (Placeholder)
 on: [push]
@@ -174,13 +173,12 @@ jobs:
       - run: echo "Add real validation/build steps later."
 EOF
 
-          # ---- manuscript/ ----
+          ############ manuscript/ & docs/ ############
           write_if_missing "manuscript/review_article.md" <<'EOF'
 # Review Article Draft (Placeholder)
 Start your manuscript here.
 EOF
 
-          # ---- docs/ ----
           keep "docs"
 
       - name: Commit changes (if any)
