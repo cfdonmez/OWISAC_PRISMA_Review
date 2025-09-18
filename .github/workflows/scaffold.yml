@@ -1,0 +1,197 @@
+name: Scaffold repo structure
+
+on:
+  workflow_dispatch: {}   # run manually from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  scaffold:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create directories & files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # helper: write file only if missing
+          write_if_missing () {
+            local path="$1"; shift
+            if [ ! -f "$path" ]; then
+              mkdir -p "$(dirname "$path")"
+              cat > "$path" <<'EOF'
+$CONTENT$
+EOF
+            fi
+          }
+
+          # helper: touch .gitkeep in empty dirs
+          keep () {
+            mkdir -p "$1"
+            : > "$1/.gitkeep"
+          }
+
+          # ---- root files ----
+          write_if_missing "README.md" <<'EOF'
+# Placeholder
+This README will be replaced by your existing one or edited later.
+EOF
+
+          write_if_missing "LICENSE" <<'EOF'
+Placeholder license (MIT/CC-BY etc.). Replace with the real text.
+EOF
+
+          write_if_missing "supplementary_material.md" <<'EOF'
+# Supplementary Material (Placeholder)
+Describe supplementary figures/tables here.
+EOF
+
+          # ---- data/ ----
+          write_if_missing "data/included_studies.csv" <<'EOF'
+record_id,doi_or_id,venue,year,title,authors,SRC,TRACE,architecture,channel_regime,wavelength_nm,primary_outcome,task_domain,data_availability,opa_N_elements,opa_pitch_um,opa_phase_bits,opa_scan_range_deg,opa_scan_rate_hz,ris_size_elems,ris_lattice,ris_phase_states,ris_response_ms,ris_fill_factor,z_total_m,nlos_geometry,Cn2,r0_m,rytov_var,regime,pillar_WD_JD,pillar_RC_PR_T,pillar_BN_RIS,pillar_RPB_Kol,pillar_HW_Q_CTRL,optimizer,training_signal,snr_db,sinr_db,ber,evm_pct,psl_db,islr_db,hpbw_deg,contrast,roc_auc,crb_unit,runtime_s,mem_gb,baselines_present,realism_score,rob_overall,normalization_notes,notes
+EOF
+
+          write_if_missing "data/excluded_studies.csv" <<'EOF'
+record_id,doi_or_id,year,title,authors,reason
+EOF
+
+          write_if_missing "data/screening_log.csv" <<'EOF'
+date,source,query_id,hits,included_phase1,included_phase2,notes
+EOF
+
+          # ---- protocol/ ----
+          write_if_missing "protocol/prisma_protocol.md" <<'EOF'
+# PRISMA-P Protocol (Placeholder)
+Register OSF/PROSPERO details here.
+EOF
+
+          write_if_missing "protocol/prisma_checklist.pdf" <<'EOF'
+This is a placeholder for the PRISMA checklist PDF. Replace with the real PDF.
+EOF
+
+          write_if_missing "protocol/search_strategy.md" <<'EOF'
+# Search Strategy (Placeholder)
+Include database queries, dates, and snapshots.
+EOF
+
+          write_if_missing "protocol/data_extraction_form.xlsx" <<'EOF'
+This is a placeholder for the Excel extraction form. Replace with the real XLSX.
+EOF
+
+          write_if_missing "protocol/risk_of_bias_tool.md" <<'EOF'
+# Risk of Bias Tool (Placeholder)
+Describe ROB rubric and usage.
+EOF
+
+          write_if_missing "protocol/exclusion_reasons.md" <<'EOF'
+# Standardized Exclusion Reasons (Placeholder)
+List normalized exclusion codes here.
+EOF
+
+          # ---- results/ ----
+          write_if_missing "results/prisma_flow_diagram.png" <<'EOF'
+Placeholder for PRISMA flow diagram image. Replace with the real PNG.
+EOF
+
+          write_if_missing "results/prisma_counts.json" <<'EOF'
+{}
+EOF
+
+          # synthesis_tables/
+          write_if_missing "results/synthesis_tables/prisma_counts.csv" <<'EOF'
+metric,count
+EOF
+          write_if_missing "results/synthesis_tables/pillars_summary.csv" <<'EOF'
+pillar,count
+EOF
+          write_if_missing "results/synthesis_tables/metrics_coverage.csv" <<'EOF'
+metric,n
+EOF
+          write_if_missing "results/synthesis_tables/hardware_awareness.csv" <<'EOF'
+aspect,n
+EOF
+          write_if_missing "results/synthesis_tables/turbulence_params.csv" <<'EOF'
+Cn2_min,Cn2_max,r0_min,r0_max,Rytov_min,Rytov_max
+EOF
+          write_if_missing "results/synthesis_tables/rob_overall_counts.csv" <<'EOF'
+rob_level,count
+EOF
+          write_if_missing "results/synthesis_tables/rob_by_pillar.csv" <<'EOF'
+pillar,low,some,high
+EOF
+          write_if_missing "results/synthesis_tables/SoF_pillars.csv" <<'EOF'
+pillar,certainty
+EOF
+          write_if_missing "results/synthesis_tables/excluded_reasons.csv" <<'EOF'
+reason,count
+EOF
+
+          # ---- scripts/analysis/ ----
+          write_if_missing "scripts/analysis/validate_included_studies.py" <<'EOF'
+#!/usr/bin/env python3
+# Minimal placeholder: schema checks to be implemented.
+print("validate_included_studies: placeholder")
+EOF
+
+          write_if_missing "scripts/analysis/prisma_counts.py" <<'EOF'
+#!/usr/bin/env python3
+print("prisma_counts: placeholder")
+EOF
+
+          write_if_missing "scripts/analysis/excluded_reasons.py" <<'EOF'
+#!/usr/bin/env python3
+print("excluded_reasons: placeholder")
+EOF
+
+          write_if_missing "scripts/analysis/synth_make_tables.py" <<'EOF'
+#!/usr/bin/env python3
+print("synth_make_tables: placeholder")
+EOF
+
+          write_if_missing "scripts/analysis/rob_summary.py" <<'EOF'
+#!/usr/bin/env python3
+print("rob_summary: placeholder")
+EOF
+
+          write_if_missing "scripts/analysis/make_prisma_flow.py" <<'EOF'
+#!/usr/bin/env python3
+print("make_prisma_flow: placeholder")
+EOF
+
+          # ---- .github/workflows/ ----
+          write_if_missing ".github/workflows/validate-and-build.yml" <<'EOF'
+name: Validate & Build (Placeholder)
+on: [push]
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Add real validation/build steps later."
+EOF
+
+          # ---- manuscript/ ----
+          write_if_missing "manuscript/review_article.md" <<'EOF'
+# Review Article Draft (Placeholder)
+Start your manuscript here.
+EOF
+
+          # ---- docs/ ----
+          keep "docs"
+
+      - name: Commit changes (if any)
+        shell: bash
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Scaffold: create PRISMA repo structure and placeholders"
+            git push
+          else
+            echo "No changes to commit."
+          fi
