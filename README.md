@@ -2,7 +2,7 @@
 **Project Status:** Ongoing | **Last Updated:** 2025-09-18
 
 [![PRISMA 2020 Compliant](https://img.shields.io/badge/PRISMA-2020-blue.svg)](https://www.prisma-statement.org/)
-[![Protocol Registered](https://img.shields.io/badge/OSF-Registered-informational.svg)](#registration)
+[![Protocol Registered](https://img.shields.io/badge/OSF-Registered-informational.svg)](https://osf.io/9g3xd)
 [![Open Data](https://img.shields.io/badge/Open%20Data-CC--BY--4.0-success.svg)](#contribution--open-science-statement)
 [![Code License](https://img.shields.io/badge/Code-MIT-lightgrey.svg)](#contribution--open-science-statement)
 
