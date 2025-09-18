@@ -137,6 +137,8 @@ AND (optical OR photonic)
 - Save exact query strings and export counts per database/date to `/protocol/search_strategy.md`.  
 - Track daily/weekly deltas in `/data/screening_log.csv` (cols: `date`, `source`, `query_id`, `hits`, `included_phase1`, `included_phase2`).
 
+
+
 ---
 
 ## 3. Methodology & PRISMA Flow
@@ -146,13 +148,150 @@ Our methodology strictly tracks the PRISMA 2020 four-stage process (Identificati
 - **Transparency:** Full records of included (`included_studies.csv`) and excluded (`excluded_studies.csv`) studies are published.
 
 ### 3.1. Data Extraction and Synthesis
+
 - **Extraction Template:** `/protocol/data_extraction_form.xlsx` (columns mirror the fields in [Data Items & Extraction](#data-items))  
-- **Database:** `/data/included_studies.csv` (uses the canonical CSV header from Step 3; controlled vocabularies in `/protocol/codebook.md`)  
+- **Canonical Database:** `/data/included_studies.csv` (uses the CSV header from Step 3; controlled vocabularies live in `/protocol/codebook.md`)  
 - **Normalization:** Per-study outcomes may be rescaled (e.g., dB per meter; per-aperture). Exact transforms are recorded in the `normalization_notes` field.  
 - **Synthesis Approach:** Thematic synthesis mapped to the project’s **five technical pillars** (WD-JD, RC-PR-T, BN-RIS, RPB-Kol, HW-Q/CTRL). Mini meta-analyses are run only on homogeneous subsets; heterogeneous results are aggregated narratively with vote-counting of effect direction.  
-- **Reproducibility:** All analysis scripts live under `/scripts/analysis/` and regenerate tables/figures from `included_studies.csv`. Versioned queries live in `/protocol/search_strategy.md`.
+- **Reproducibility:** All analysis scripts live under `/scripts/analysis/` and regenerate tables/figures from `included_studies.csv`. Versioned queries live in `/protocol/search_strategy.md`.  
+- **Validation:** Run `python scripts/analysis/validate_included_studies.py data/included_studies.csv` before commits.
 
----
+<a id="data-items"></a>
+## Data Items & Extraction
+
+All included records are extracted into `/data/included_studies.csv` using the template in `/protocol/data_extraction_form.xlsx`. Fields are aligned to the five technical pillars (WD-JD, RC-PR-T, BN-RIS, RPB-Kol, HW-Q/CTRL) to keep screening → synthesis consistent.
+
+**Required fields (must be filled for inclusion):**
+
+| Field | Type | Description | Example |
+|---|---|---|---|
+| record_id | string | Unique key (stable across updates) | ieeexp-2023-01234 |
+| doi_or_id | string | DOI or arXiv ID | 10.1364/OE.xxxxx |
+| venue | enum | {journal, conf, preprint} | journal |
+| year | int | Publication year | 2024 |
+| title | string | Paper title | Cascaded OPA–RIS for NLoS ISAC |
+| authors | string | First author et al. | Lee et al. |
+| SRC | enum | {IEEE, SCOPUS, WOS, OPTICA, ARXIV, GSCHOLAR} | IEEE |
+| TRACE | enum | {DIRECT, BWD, FWD} | DIRECT |
+| architecture | enum | {OPA→RIS, OPA↔RIS, single-hop, other} | OPA→RIS |
+| channel_regime | enum | {LoS, NLoS, NLoS+turbulence} | NLoS+turbulence |
+| wavelength_nm | float | Operating wavelength (nm) | 1550 |
+| primary_outcome | enum | {SNR,SINR,BER,EVM,PSL,ISLR,Contrast,ROC,CRB} | SINR |
+| task_domain | enum | {comms, sensing, ISAC} | ISAC |
+| data_availability | enum | {code+data, code-only, none} | code-only |
+
+**OPA parameters (fill if applicable):**
+
+| Field | Type | Description | Example |
+|---|---|---|---|
+| opa_N_elements | int | Number of elements | 4096 |
+| opa_pitch_um | float | Element pitch (µm) | 6.0 |
+| opa_phase_bits | int | Quantization bits | 2 |
+| opa_scan_range_deg | float | ±scan range | 30 |
+| opa_scan_rate_hz | float | Max scan rate | 1000 |
+
+**RIS/metasurface parameters (fill if applicable):**
+
+| Field | Type | Description | Example |
+|---|---|---|---|
+| ris_size_elems | int | Active elements (or equivalent area) | 2048 |
+| ris_lattice | enum | {grid, aperiodic, blue-noise, hybrid} | blue-noise |
+| ris_phase_states | int | Discrete phase levels | 4 |
+| ris_response_ms | float | Element response time (ms) | 2.5 |
+| ris_fill_factor | float | Active fill (0–1) | 0.72 |
+
+**Propagation / turbulence / geometry:**
+
+| Field | Type | Description | Example |
+|---|---|---|---|
+| z_total_m | float | Total path length | 120 |
+| nlos_geometry | enum | {single-bounce, multi-bounce, around-the-corner} | single-bounce |
+| Cn2 | float | Refractive index structure const. (m^-2/3) | 1e-14 |
+| r0_m | float | Fried parameter (m) | 0.04 |
+| rytov_var | float | Rytov variance σ_R^2 | 0.9 |
+| regime | enum | {Fresnel, Fraunhofer, mixed} | Fresnel |
+
+**Algorithms / pillars (tick what applies):**
+
+| Field | Type | Description | Example |
+|---|---|---|---|
+| pillar_WD_JD | bool | Wigner-domain joint design used | true |
+| pillar_RC_PR_T | bool | RIS-coded phase retrieval | true |
+| pillar_BN_RIS | bool | Aperiodic/blue-noise design | false |
+| pillar_RPB_Kol | bool | Robust pre-shaping under turbulence | true |
+| pillar_HW_Q_CTRL | bool | Hardware-aware/quantization/calibration | true |
+| optimizer | string | e.g., ADAM, SGD, GA, CMA-ES | ADAM |
+| training_signal | string | pilot/PR masks used | m=16 coded masks |
+
+**Outcomes (record at least one; use units shown):**
+
+| Field | Type | Units | Example |
+|---|---|---|---|
+| snr_db | float | dB | 24.5 |
+| sinr_db | float | dB | 18.2 |
+| ber | float | — | 2.3e-4 |
+| evm_pct | float | % | 3.8 |
+| psl_db | float | dB | -17.2 |
+| islr_db | float | dB | -11.0 |
+| hpbw_deg | float | deg | 0.8 |
+| contrast | float | ROI/background | 6.2 |
+| roc_auc | float | 0–1 | 0.93 |
+| crb_unit | string | parameter name & unit | angle (deg^2) |
+| runtime_s | float | seconds | 42.3 |
+| mem_gb | float | gigabytes | 3.1 |
+
+**Reproducibility & bias flags (quick):**
+
+| Field | Type | Description | Example |
+|---|---|---|---|
+| baselines_present | bool | Fair baselines/ablations? | true |
+| realism_score | enum | {low, mid, high} | mid |
+| rob_overall | enum | {low, some, high} | some |
+| normalization_notes | string | Any rescaling/assumptions applied | SNR normalized per-meter |
+| notes | string | Free-text caveats | Missing r0 unit; inferred from fig. |
+
+**CSV header (copy into `/data/included_studies.csv`):**  
+`record_id,doi_or_id,venue,year,title,authors,SRC,TRACE,architecture,channel_regime,wavelength_nm,primary_outcome,task_domain,data_availability,opa_N_elements,opa_pitch_um,opa_phase_bits,opa_scan_range_deg,opa_scan_rate_hz,ris_size_elems,ris_lattice,ris_phase_states,ris_response_ms,ris_fill_factor,z_total_m,nlos_geometry,Cn2,r0_m,rytov_var,regime,pillar_WD_JD,pillar_RC_PR_T,pillar_BN_RIS,pillar_RPB_Kol,pillar_HW_Q_CTRL,optimizer,training_signal,snr_db,sinr_db,ber,evm_pct,psl_db,islr_db,hpbw_deg,contrast,roc_auc,crb_unit,runtime_s,mem_gb,baselines_present,realism_score,rob_overall,normalization_notes,notes`
+
+**Coding rules (consistency):**
+- Use **nm** for wavelength, **m** for distances, **deg** for angles, **dB** for SNR/SINR/PSL/ISLR.  
+- Booleans are `true/false`; enums exactly as listed.  
+- If a value is missing, leave blank and explain in `notes`.  
+- If paper units differ, convert; log any rescaling in `normalization_notes`.
+
+**Extraction workflow:**
+1. Create a new row per study in `/data/included_studies.csv`.  
+2. Prefer the **main** scenario if multiple settings exist; mention alternates in `notes` (you can split per-scenario rows later).  
+3. Keep PDFs out of the repo; manage them in your reference manager; store persistent IDs in `doi_or_id`.
+
+### 3.2. Automated Counts & Tables
+
+We auto-generate counts and synthesis tables from the CSVs:
+
+- **PRISMA counts:** `python scripts/analysis/prisma_counts.py data/screening_log.csv`  
+  Outputs `results/prisma_counts.json` and `results/synthesis_tables/prisma_counts.csv`.
+
+- **Synthesis tables:** `python scripts/analysis/synth_make_tables.py data/included_studies.csv`  
+  Emits pillar coverage, metrics coverage, hardware-awareness, and turbulence parameter summaries under `results/synthesis_tables/`.
+
+For convenience, use the `Makefile`:
+```bash
+make all        # validate + prisma + synth
+make validate   # schema & row checks
+make prisma     # update PRISMA counts
+make synth      # rebuild synthesis tables
+
+### 3.3. Risk of Bias & Certainty of Evidence
+
+- **Risk-of-Bias rubric:** see `/protocol/risk_of_bias_tool.md` (ROB-TECH-Optics).  
+- **ROB summaries:** `python scripts/analysis/rob_summary.py data/included_studies.csv`  
+  → `results/synthesis_tables/rob_overall_counts.csv`, `results/synthesis_tables/rob_by_pillar.csv`.  
+- **Certainty (SoF):** `python scripts/analysis/build_sof_tables.py data/included_studies.csv`  
+  → `results/synthesis_tables/SoF_pillars.csv` (simple heuristic based on % Low ROB per pillar).
+
+> Notes: We report ROB on the 3-level scale (low/some/high). SoF certainty labels (High/Moderate/Low) are derived heuristically and can be overridden after manual review.
+
+
 
 ## 4. Contribution & Open Science Statement
 - This review is the **first to explicitly synthesize the OPA–RIS architecture literature within the unified ISAC context using PRISMA 2020 standards**.
@@ -164,26 +303,47 @@ Our methodology strictly tracks the PRISMA 2020 four-stage process (Identificati
 
 ## 5. Repository Structure (Key Files and Folders)
 <code> 
-├── README.md # You are here
+├── README.md
 ├── LICENSE
 ├── data/
-│ ├── included_studies.csv
-│ ├── excluded_studies.csv
-│ └── screening_log.csv
+│   ├── included_studies.csv
+│   ├── excluded_studies.csv
+│   └── screening_log.csv
 ├── protocol/
-│ ├── prisma_protocol.md
-│ ├── prisma_checklist.pdf
-│ ├── search_strategy.md
-│ └── data_extraction_form.xlsx
+│   ├── prisma_protocol.md
+│   ├── prisma_checklist.pdf
+│   ├── search_strategy.md
+│   ├── data_extraction_form.xlsx
+│   ├── risk_of_bias_tool.md
+│   └── exclusion_reasons.md
 ├── results/
-│ ├── prisma_flow_diagram.png
-│ └── synthesis_tables/
+│   ├── prisma_flow_diagram.png
+│   ├── prisma_counts.json
+│   └── synthesis_tables/
+│       ├── prisma_counts.csv
+│       ├── pillars_summary.csv
+│       ├── metrics_coverage.csv
+│       ├── hardware_awareness.csv
+│       ├── turbulence_params.csv
+│       ├── rob_overall_counts.csv
+│       ├── rob_by_pillar.csv
+│       ├── SoF_pillars.csv
+│       └── excluded_reasons.csv
 ├── scripts/
-│ └── analysis/
+│   └── analysis/
+│       ├── validate_included_studies.py
+│       ├── prisma_counts.py
+│       ├── excluded_reasons.py
+│       ├── synth_make_tables.py
+│       ├── rob_summary.py
+│       └── make_prisma_flow.py
+├── .github/
+│   └── workflows/
+│       └── validate-and-build.yml
 ├── manuscript/
-│ └── review_article.md
+│   └── review_article.md
 ├── docs/
-└── supplementary_material.md </code>
+└── supplementary_material.md</code>
 
 
 
