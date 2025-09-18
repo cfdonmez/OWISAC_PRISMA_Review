@@ -1,9 +1,0 @@
-stage,source,count,notes
-Identification,Databases,70,"IEEE+OSA+ScienceDirect+arXiv arama sonuçları (2005–2025; EN; NOT fiber)"
-Identification,Other,0,"Başka kaynak eklenmedi"
-Identification,Duplicates removed,0,"Dupe temizliği henüz yapılmadı"
-Screening,Title/Abstract screened,265,"312+7-54"
-Screening,Excluded at T/A,193,"N3,N5 ağırlıklı"
-Eligibility,Full-text assessed,72,"T/A Include/Maybe"
-Eligibility,Full-text excluded (with reasons),49,"N4,N5,N8"
-Included,Studies included in review,23,"Çıkarma formuna alınanlar"
