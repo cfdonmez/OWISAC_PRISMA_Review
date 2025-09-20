@@ -1,0 +1,65 @@
+Title,Optical Phased Array (OPA) and Reconfigurable Intelligent Surface (RIS) Architecture Type,Wavelength / Band (λ),Integrated Sensing and Communication (ISAC) Performance Metrics,ISAC Coupling & Metrics,Turbulence Parameters Reported ,Beam Quality Metrics,Hardware Maturity & Safety/Power
+Optical Integrated Sensing and Communication System Based on Combination of OIRS and PD Array for Mobile Scenarios,"Insufficient details provided (the paper focuses on OIRS rather than OPA, and while it describes reflective capabilities and regional control, it lacks specific architectural details such as number of layers or specific innovations)",λ=1550 nm (p.35),"- Signal-to-Noise Ratio (SNR): Defined as SN R = P 2 t / (σ 2 nr n + σ 2 nr w )
+- Bit Error Rate (BER): Expressed as P e = 1/2 erfc(√(SNR/2))
+- Outage Probability: P out = Pr(γ < γ th)","Coupling=integrated-beam; Metrics=SNR; BER; outage probability (Sec. IV, V)","- Model: Lognormal for weak turbulence, Gamma-Gamma for medium to strong turbulence
+- σ 2 R: < 0.3 for weak turbulence, ≥ 0.3 for medium to strong turbulence
+- C 2 n: Related to σ 2 X = 0.5C 2 n k 2 l s,o 7/6
+- λ: 1550 nm",Not mentioned (the paper does not provide specific numerical values or units for beam quality metrics),Maturity=simulation; Safety=NA; Power=NA
+Optical Integrated Sensing and Communication System Based on Combination of OIRS and PD Array for Mobile Scenarios,Insufficient details provided,λ=1550 nm (p.35),"- Signal-to-Noise Ratio (SNR): P 2 t / (σ 2 nr n + σ 2 nr w )
+- Bit Error Rate (BER): 1/2 erfc(√(SNR/2))
+- Outage Probability: Pr(γ < γ th)","Coupling=waveform reuse & TDM; Metrics=SNR; BER; trade-off between communication and positioning accuracy (Sec. III, IV)","- Model: Lognormal for weak turbulence, Gamma-Gamma for medium to strong turbulence
+- σ 2 R: < 0.3 for weak turbulence, ≥ 0.3 for medium to strong turbulence
+- σ 2 X: Related to C 2 n, k, and l s,o,r
+- λ: 1550 nm",Not mentioned (the paper discusses beam quality metrics but does not provide specific numerical values or units),Maturity=simulation; Safety=NA; Power=NA
+Assessment of adaptive optics-corrected optical links statistics from integrated turbulence parameters through a Gaussian process metamodel,Insufficient details provided (the paper does not mention any specific OPA or RIS architecture),λ=1.55 μm; 1.5 μm (p. various),"- Signal-to-Noise Ratio (SNR): Not mentioned (the paper discusses SNR in relation to channel capacity and error probability but does not provide specific numerical values)
+- Signal-to-Interference-plus-Noise Ratio (SINR): Not mentioned
+- Bit Error Rate (BER): Not mentioned
+- Error Vector Magnitude (EVM): Not mentioned
+- Half-Power Beamwidth (HPBW): Not mentioned
+- Peak Side Lobe Ratio (PSL): Not mentioned
+- Integrated Side Lobe Ratio (ISLR): Not mentioned
+- Contrast ratio: Not mentioned
+- Receiver Operating Characteristic (ROC): Not mentioned
+- Area Under the Curve (AUC): Not mentioned",Coupling=AO correction; Metrics=estimation error < 0.7 dB for 1% quantile of ROP; half correlation time estimation (p./Fig./Sec.),r0=<value>; Cn^2=<value>; σR^2=<value>; Model=Rytov; σ2χ<0.3 (Sec. 2.1); r0=<value>; h=<value>; v=<value> (Sec. 3.4),"- Estimation error on 1% quantile of received optical power: < 0.7 dB
+- Relative error on 0.01 quantile: 0.57% (average), < 1.92% (99% of cases)
+(Context=simulated, whole database) (Table on page 7)",Maturity=simulation; Safety=NA; Power=NA
+Self-adaptive integrated photonic receiver for turbulence compensation in free space optical links,"- Optical Phased Array (OPA) Architecture Type:
+  - Number of layers: Single layer (integrated into a silicon photonic chip)
+  - Configuration type: Transmissive (samples incoming beam and combines signals)
+  - Specific architectural innovations: Binary-tree mesh architecture with tunable Mach-Zehnder interferometers
+- Reconfigurable Intelligent Surface (RIS) Architecture Type: Insufficient details provided",λ=1545 nm; 1550 nm (p./Fig./Sec.),Not mentioned (the paper does not provide specific numerical values for any of the requested performance metrics),Not mentioned (the paper does not provide specific ISAC metrics or details on how sensing and communication are combined),"r0=35, 8.9, 2.2 cm; Cn^2=10^-15–10^-13 m^-2/3; Model=Kolmogorov/Von Karman/modified Von Karman; z=800 m","- Fried parameter (r 0) = 35 cm, 8.9 cm, 2.2 cm (Context=simulated, turbulence conditions)
+- Beam divergence = 1 mrad full width (Context=simulated, beam characteristics)
+- Rytov variance = 0.013, 0.132, 1.322 (Context=simulated, scintillation intensity)","Maturity=prototype (lab); Safety=NA; Power=less than 70 mW per MZI, maximum dissipated power by a heater is 60 mW (p./Fig./Sec.)"
+"Optical Integrated Sensing and Communication: Architectures, Potentials and Challenges",Insufficient details provided (the paper mentions OPA for beam steering but does not specify architecture type or details),λ=1550 nm (p.3); λ=28.3 THz - 845 THz (p.2),"- Signal-to-Noise Ratio (SNR): 22.5 dB (context: achieving a distance accuracy of ±2.2 cm with a frequency-modulated continuous-wave laser radar)
+- Bit Error Rate (BER): Not specified (context: evaluated through Monte-Carlo simulations)","Coupling=reuse-pulsed, constant-modulus, multi-carrier; Metrics=rate 100 Gbps; range res ±2.2 cm; angle res 80-µrad (Sec. II-B, II-C, II-D)",Not mentioned (no specific turbulence parameters or models are provided in the paper),"HPBW=80 µrad (Context=measured, 1550-nm laser ranging system) (Sec. High Angle Resolution)",Maturity=prototype (lab); Safety=NA; Power=NA
+Investigation of turbulence-tolerant free-space optical communications via multiplane light conversion,Insufficient details provided (the paper does not explicitly mention OPA or RIS architecture types or specific architectural innovations),λ=1.55 μm (p. body),"- Signal-to-Noise Ratio (SNR): Mentioned in the context of Y-branch combiner performance; no specific numerical value provided.
+- Other metrics: Not mentioned.",Coupling=spatial multiplexing; Metrics=SNR (Sec. 7.5),"r0=0.159k^2 Cn^2 L^-3/5 (for Cn^2=10^-14, 10^-13, 10^-12 m^-2/3);
+Cn^2=10^-14, 10^-13, 10^-12 m^-2/3;
+Model=Modified von Kármán PSD (collapses to Kolmogorov PSD);
+z=2 km",Power loss or penalty below 1 dB; Normalized variance below 0.01 (Context=simulated) (Sec. 3),Maturity=prototype (lab); Safety=NA; Power=NA
+Deep neural network-based phase calibration in integrated optical phased arrays,"- Number of layers: Not explicitly mentioned
+- Configuration type: Transmissive
+- Specific architectural innovations: Grating-based radiators for transversal beam-steering, thermo-optic tuning for longitudinal beam steering
+- RIS architecture: Insufficient details provided",λ=1550 nm (p.3),"- Integrated Side Lobe Ratio (ISLR): 7.05 dB (experimental), 6.88 dB (simulated)
+- Half-Power Beamwidth (HPBW): 0.7 • (transversal), 0.6 • (longitudinal)","Coupling=not mentioned; Metrics=intensity degradation 0.84 dB; SMSR 7.05 dB; beam divergence angle 0.7° transversal, 0.6° longitudinal (Sec. various)",Not mentioned (the paper does not discuss turbulence parameters or models),SMSR=7.05 dB (measured); SMSR=6.88 dB (simulated); HPBW=0.7 deg (transversal); HPBW=0.6 deg (longitudinal),Maturity=prototype (lab); Safety=NA; Power=12.2 mW (p.2)
+Transmit Beamforming Design for ISAC With Stacked Intelligent Metasurfaces,"- Number of layers: Stacked (multiple layers)
+- Configuration type: Transmissive
+- Specific architectural innovations: Not mentioned",λ=10.71 mm (calculated from carrier frequency),"- Sum Rate: 13.56 bit/s/Hz (average)
+- SINR: Not explicitly provided with numerical values
+- Beam-Matching Error: -12.82 dB (average)
+- Other metrics (SNR, BER, EVM, HPBW, PSL, ISLR, contrast ratio, ROC, AUC): Not mentioned",Coupling=waveform reuse; Metrics=sum rate 13.56 bit/s/Hz; beam-matching error -12.82 dB (Sec.5),Not mentioned (the paper does not provide specific turbulence parameters or models),J MSE = -12.7 dB; J MSE = -12.8 dB; J MSE = -13.16 dB; J MSE = -12.82 dB (Context=simulated) (Fig.5),Maturity=NA; Safety=NA; Power=20 dBm (p./Fig./Sec.)
+An autonomous and passive daytime air-turbulence monitor for FSOC link optimization,Insufficient details provided (the paper does not mention OPA or RIS architecture types),λ=532 nm (p. body),- Signal-to-Noise Ratio (SNR): above 120 dB,Not mentioned (the paper does not provide specific information on ISAC coupling or metrics),C 2 N (h) profiles up to 1000 m heights; r 0 estimated from C 2 N (h); No specific values or ranges provided for r 0 or C 2 N (h); No turbulence model mentioned; No σR^2 or path length provided.,Not mentioned (the paper does not provide specific numerical values or units for beam quality metrics),Maturity=field trial; Safety=NA; Power=less than 50 W (p./Fig./Sec.)
+Low sidelobe silicon optical phased array with Chebyshev amplitude distribution,"- Optical Phased Array (OPA) Architecture Type:
+  - Number of layers: Not specified
+  - Configuration type: Transmissive (implied by the use of beam splitter tree and grating antenna array)
+  - Specific architectural innovations: Use of arbitrary ratio power splitters (ARPSs) for flexible amplitude distribution, Dolph-Chebyshev amplitude distribution for low sidelobe level
+- Reconfigurable Intelligent Surface (RIS) Architecture Type: Insufficient details provided",λ=1520-1610 nm; 1550 nm (p./Fig./Sec.),"- Signal-to-Noise Ratio (SNR): Not mentioned (no numerical value provided)
+- Signal-to-Interference-plus-Noise Ratio (SINR): Not mentioned
+- Bit Error Rate (BER): Not mentioned
+- Error Vector Magnitude (EVM): Not mentioned
+- Half-Power Beamwidth (HPBW): 2.8 • × 1.7 • (divergence)
+- Peak Side Lobe Ratio (PSL): Not mentioned
+- Integrated Side Lobe Ratio (ISLR): Up to 25.3 dB (SLSR), average 19.1 dB
+- Contrast ratio: Not mentioned
+- Receiver Operating Characteristic (ROC): Not mentioned
+- Area Under the Curve (AUC): Not mentioned",Not mentioned (the paper does not provide information on ISAC coupling or metrics),Not mentioned (no information on turbulence parameters or models is included in the paper),"SLSR=25.3 dB; SLSR_avg=19.1 dB; HPBW=2.8 × 1.7 deg; FOV=84 × 13 deg (Context=measured, far field)",Maturity=prototype (lab); Safety=NA; Power=0-75 mW (p./Fig./Sec.)
