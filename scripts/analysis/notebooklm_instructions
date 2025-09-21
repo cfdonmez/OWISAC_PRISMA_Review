@@ -1,0 +1,22 @@
+TASK — 5-study extraction (PRISMA)
+Selection: Prefer OPA–RIS optical studies; add RF if relevant as inspiration, mark with Domain.
+Rule: One line per field; units mandatory; Anchor required (p./Fig./Sec.), otherwise NA. If unclear, mark (Inferred).
+Topology & HW → Topology=...; OPA=...; RIS=...; ISAC=... (Anchor)
+Metrics & Eval → Metric=: (Ctx=λ=…, z=…, Path=LoS/NLoS, Cn^2/r0=… if any) (Δ=%/dB/NA) (Anchor)
+Wavelength / Band → λ=<nm/µm; RF if f=> (Anchor)
+Range & Env → z=<…>, Env=<indoor/outdoor+scene>, Path=<LoS/NLoS> (Anchor)
+Impairment → Impairment=<type+mechanism> (Scope=<qual/quant>) (Anchor)
+Turbulence → r0=<…>; Cn^2=<…>; σR^2=<…>; Model=<…>; z=<…/NA> (Anchor)
+ISAC Coupling/Metrics → Coupling=<reuse/TDM/FDM/CDM/other>; Metrics= (Anchor)
+Signal Processing/Targeting → Capability=: <OPA/RIS counts; algorithms; gains> (Ctx=…) (Anchor)
+Solutions → Innovation=: (Benefit=<metric/effect>) (Anchor)
+Challenges → Challenge=: (Ctx=…) (Impact=…) (Mitigation=…) (Anchor)
+Phase Retrieval/Channel Est. → PR/CE=; M=<#>; Init=<…>; Iters=<#/NA> (Anchor)
+Beam Quality → PSL=; ISLR=; HPBW=; contrast=<…> (Ctx=sim/testbed) (Anchor)
+HW Maturity/Safety/Power → Maturity=<simulation/prototype/field/product>; Safety=<IEC/NA>; Power=<mW/dBm/NA> (Anchor)
+Eval Setup → Tx=…; Rx=…; Optics=…; Waveform=…; Setup=…; Dataset=… (Anchor)
+OWC Architecture → Architecture=RIS | OPA<->RIS | multi-hop | hybrid | NA> (Anchor)
+Domain → Domain=<Optical | RF (inspiration)> (Reason=)
+Baselines → Baselines=; Comparison=<sim/testbed; Fig./Tab.> (Anchor)
+Anchor & Inference → Anchor=(p./Fig./Sec.); Evidence_type=<Abstract/Body/Figure/Table>; Inference_tag=<Exact | Inferred | NA>
+Output: 5 rows, each field one line; missing values NA; at least one Anchor per row.
