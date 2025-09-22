@@ -1,0 +1,69 @@
+record_id,title,QA_status
+OPA_001,Progress and prospects for LiDARoriented optical phased arrays based on photonic integrated circuits,Turbulence missing
+FSO_012,Link range optimisation for detection methods under scintillation effects on FSO system,Turbulence missing; ArchType missing
+OPA_015,Low sidelobe silicon optical phased array with Chebyshev amplitude distribution,Turbulence missing
+2312.13640v2,"Optical Integrated Sensing and Communication: Architectures, Potentials and Challenges",Turbulence missing; ArchType missing
+OPA_012,Deep neural network-based phase calibration in integrated optical phased arrays,Turbulence missing; ArchType missing
+OWC_ORIS_HW_2023,"Optical reconfigurable intelligent surfaces aided optical wireless communications: Opportunities, challenges, and trends",OK
+ISAC_DM_RIS_2024,Design of ISAC Directional Modulation Exploring Reconfigurable Intelligent Surface,OK
+OWC_Survey_VLC_2024,Channel Characterization and Modeling for VLC-IoE Applications in 6G: A Survey,OK
+OWC_Metasurface_2023,Electrically programmable solid-state metasurfaces via flash localised heating,ArchType missing
+OWC_Survey_6G_2023,"Channel Measurement, Modeling, and Simulation for 6G: A Survey and Tutorial",OK
+LIDAR_001,Fully integrated FMCW LiDAR optical engine on a single silicon chip,Turbulence missing
+METASURFACE_001,Optical Self-Tuning of Ferroelectric Metasurfaces Infiltrated with Nematic Liquid Crystals via Photovoltaic Effect,ArchType missing
+ISAC_001,Simultaneous Beam Training and Target Sensing in ISAC Systems With RIS,Anchor missing; ArchType missing
+OPA_008,Ultrawide field-of-view integrated optical phased arrays employing multiple orbital angular momentum beams,Turbulence missing
+OPA_014,Design of optical phased array with low-sidelobe beam steering in thin film lithium niobate,Turbulence missing
+1,Transmit Beamforming Design for ISAC With Stacked Intelligent Metasurfaces,Turbulence missing
+2,Channel Characterization and Realization of Mobile Optical Wireless Communications,Turbulence missing
+3,Improved AFSA-Based Beam Training Without CSI for RIS-Assisted ISAC Systems,Turbulence missing
+4,A review of phase-change materials and their potential for reconfigurable intelligent surfaces,Turbulence missing
+5,Simultaneous Beam Training and Target Sensing in ISAC Systems With RIS,Turbulence missing
+FSO_008,Investigation of turbulence-tolerant free-space optical communications via multiplane light conversion,OK
+RIS_ISAC_001,Fully Autonomous Reconfigurable Metasurfaces with Integrated Sensing and Communication,Turbulence missing
+RIS_010,Realization of high-performance optical metasurfaces over a large area: a review from a design perspective,Turbulence missing
+OPA_015,Beam steering technology of optical phased array based on silicon photonic integrated chip,Turbulence missing
+MS_001,Reconfigurable metasurfaces towards commercial success,Turbulence missing
+1,Experimental Demonstration of Integrated Optical Wireless Sensing and Communication,Turbulence missing; Anchor missing
+2,Enhancing Battlefield Awareness: An Aerial RIS-assisted ISAC System with Deep Reinforcement Learning,Turbulence missing; Anchor missing
+3,Integrated Sensing and Communication for UAV Trajectory Optimization in Mixed FSO-RF Networks in Dynamic Weather Conditions,Anchor missing
+4,"Recent advances in metasurface design and quantum optics applications with machine learning, physics-informed neural networks, and topology optimization methods",Turbulence missing; Anchor missing
+5,"A contemporary survey on free space optical communication: Potentials, technical challenges, recent advances and research direction",Anchor missing
+1,Multistep ahead atmospheric optical turbulence forecasting for free-space optical communication using empirical mode decomposition and LSTM-based sequence-to-sequence learning,Turbulence missing; Anchor missing; ArchType missing
+2,Integrated optical phased array with on-chip amplification enabling programmable beam shaping,Turbulence missing; Anchor missing
+3,Tbps wide-field parallel optical wireless communications based on a metasurface beam splitter,Turbulence missing; Anchor missing
+4,P²C²M: Parallel Product Complex Circle Manifold for RIS-Aided ISAC Waveform Design,Turbulence missing; Anchor missing
+5,Recent Advancement in Optical Metasurface: Fundament to Application,Turbulence missing; Anchor missing
+383,Modulation Strategies for Robust Optical Wireless Communications and Sensing in 6G,Turbulence missing
+339,Flexible Waveform Design for RO-ISAC Based on OFDM-Embedded Maximum Length Sequence,Turbulence missing
+392,STARS Enabled Full-Space Integrated Sensing and Communications,Turbulence missing
+422,Photonic-electronic integrated circuit-based coherent LiDAR engine,Turbulence missing
+475,"6G Channel Modeling: Requirement, Measurement, Methodology and Simulator",Turbulence missing
+S1,Beamforming Design for RIS-aided ISAC: Maximizing Weighted Sum of SCNR and SINR,OK
+S2,Hybrid NOMA Assisted Integrated Sensing and Communication via RIS,OK
+S3,Sensing for Communication: RIS-Assisted ISAC Coordination Gain Enhancement With Imperfect CSI,OK
+S4,Assessment of adaptive optics-corrected optical links statistics from integrated turbulence parameters through a Gaussian process metamodel,OK
+S5,Fully Autonomous Reconfigurable Metasurfaces with Integrated Sensing and Communication,OK
+1,Active optical phased array integrated within a micro-cantilever,Turbulence missing
+2,Optical Integrated Sensing and Communication with Light-Emitting Diode,Turbulence missing
+3,Beamforming in Hybrid RIS assisted Integrated Sensing and Communication Systems,Turbulence missing
+4,Transmit Beamforming Design for ISAC With Stacked Intelligent Metasurfaces,Turbulence missing
+5,Pulse Sequence Sensing and Pulse Position Modulation for Optical Integrated Sensing and Communication,Turbulence missing; ArchType missing
+1,Signal Enhancing: Bi-Static ISAC with IRS-Mounted Target,Turbulence missing; Anchor missing
+2,An autonomous and passive daytime air-turbulence monitor for FSOC link optimization,Anchor missing
+3,DRL-Based Secure Beamforming Design for RIS-Assisted ISAC System: A CRB Perspective,Turbulence missing; Anchor missing
+4,Joint Beamforming for RIS-Assisted Integrated Sensing and Communication Systems,Turbulence missing; Anchor missing
+5,Federated Learning in ISAC Systems: Bridging Satellite and RIS-Enhanced Terrestrial Networks,Turbulence missing; Anchor missing
+5,Beamforming design for RIS-aided MIMO ISAC Systems based on Mutual Information,Anchor missing
+1,Self-adaptive integrated photonic receiver for turbulence compensation in free space optical links,Anchor missing
+3,Joint Localization and Information Transfer for RIS Aided Full-Duplex Systems,Anchor missing
+4,Rate-Splitting Multiple Access for Transmissive Reconfigurable Intelligent Surface Transceiver Empowered ISAC Systems,Anchor missing
+OPA_004,"1000-Channel Integrated Optical Phased Array with 180° Field of View, High Resolution and High Scalability",Turbulence missing
+ISAC_003,Nested Tensor-Based Framework for ISAC Assisted by Reconfigurable Intelligent Surface,Turbulence missing
+ISAC_001,RIS-assisted Integrated Sensing and Communications: A Subspace Rotation Approach,Turbulence missing
+ISAC_004,Sum Secrecy Rate Optimization in RIS-Assisted ISAC Systems: A Manifold-Based Framework,Turbulence missing
+MS_001,A review of dielectric optical metasurfaces for wavefront control,Turbulence missing
+1,Co-Existence of SiPh Sensing Link and Real World Traffic Over 100 m FSO Link for 6G Deployments,Turbulence missing
+2,MUSIC-Based Moving Target Estimation in RIS-aided ISAC Systems under NLoS Scenarios,Turbulence missing
+3,Rate-Splitting Multiple Access for Transmissive Reconfigurable Intelligent Surface Transceiver Empowered ISAC Systems,Turbulence missing
+4,Survey of next-generation optical wireless communication technologies for 6G and Beyond 6G,Turbulence missing
