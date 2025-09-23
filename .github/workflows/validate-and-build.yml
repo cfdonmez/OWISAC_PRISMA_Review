@@ -1,0 +1,13 @@
+name: Validate and Build
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Validate CSVs
+      run: python scripts/analysis/validate_included_studies.py data/included_studies.csv || true
+    - name: PRISMA Counts
+      run: python scripts/analysis/prisma_counts.py data/screening_log.csv || true
+    - name: Synthesis Tables
+      run: python scripts/analysis/synth_make_tables.py data/included_studies.csv || true
