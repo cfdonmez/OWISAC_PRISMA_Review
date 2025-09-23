@@ -385,3 +385,7 @@ Community contributions and suggestions are welcome.
 ---
 
 > _This work rigorously implements systematic review best practices in the emerging field of programmable optical wireless systems. Please consult the protocol and checklist for full compliance details._
+
+**Data & QA Artifacts (Current):**
+- Extraction workbook: [data/extraction/review_ancor_outputs_with_QA_and_sections.xlsx](data/extraction/review_ancor_outputs_with_QA_and_sections.xlsx)
+- QA log (CSV): [data/qa_logs/qa_log.csv](data/qa_logs/qa_log.csv)
