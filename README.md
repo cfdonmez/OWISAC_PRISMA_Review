@@ -39,7 +39,7 @@ All protocol deviations will be logged in `/protocol/AMENDMENTS.md`.
 ## 2. Research Protocol (PRISMA-P)
 Our protocol was designed and deposited prior to review initiation as recommended by PRISMA-P.  
 **Protocol access:** See [`/protocol/prisma_protocol.md`](./protocol/prisma_protocol.md) and [checklist](https://www.prisma-statement.org/PRISMAStatement/Checklist).
-- **Pre-registration:** (If available: PROSPERO/OSF registration info)
+- **Pre-registration:** (https://doi.org/10.17605/OSF.IO/57VRJ)
 - **PRISMA 2020 Checklist:** [`/protocol/prisma_checklist.pdf`](./protocol/prisma_checklist.pdf) (to be updated with each project milestone)
 
 ### 2.1. Research Questions
