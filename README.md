@@ -2,7 +2,7 @@
 **Project Status:** Ongoing | **Last Updated:** 2025-09-18
 
 [![PRISMA 2020 Compliant](https://img.shields.io/badge/PRISMA-2020-blue.svg)](https://www.prisma-statement.org/)
-[![Protocol Registered](https://img.shields.io/badge/OSF-Registered-informational.svg)](https://osf.io/9g3xd)
+[![Protocol Registered](https://img.shields.io/badge/OSF-Registered-informational.svg)](https://doi.org/10.17605/OSF.IO/57VRJ)
 [![Open Data](https://img.shields.io/badge/Open%20Data-CC--BY--4.0-success.svg)](#contribution--open-science-statement)
 [![Code License](https://img.shields.io/badge/Code-MIT-lightgrey.svg)](#contribution--open-science-statement)
 
@@ -30,7 +30,7 @@ This repository documents a systematic review, conducted in accordance with **PR
 
 ### Registration
 This review is preregistered at the **Open Science Framework (OSF)**.  
-OSF link/DOI: _to be inserted_  
+OSF link/DOI: https://doi.org/10.17605/OSF.IO/57VRJ  
 All protocol deviations will be logged in `/protocol/AMENDMENTS.md`.
 
 
