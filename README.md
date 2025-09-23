@@ -11,6 +11,10 @@
 [![Protocol Registered](https://img.shields.io/badge/OSF-Registered-informational.svg)](https://doi.org/10.17605/OSF.IO/57VRJ)
 [![Open Data](https://img.shields.io/badge/Open%20Data-CC--BY--4.0-success.svg)](#contribution--open-science-statement)
 [![Code License](https://img.shields.io/badge/Code-MIT-lightgrey.svg)](#contribution--open-science-statement)
+> **Project Transparency Panel**
+> - **Last Updated:** 2025-09-23 (Europe/Istanbul, UTC+03)
+> - **Completed:** PRISMA-P preregistration (OSF DOI), search strategy (initial), extraction (Sheet1), QA log (current), review_structure mapping
+> - **Planned/In-Progress:** ROB rubric & SoF tables, automated synthesis tables, PRISMA flow image regeneration, expanded OPA/RIS/ISAC Results sections, benchmark box (turbulence), joint-metrics box (ISAC)
 
 ---
 
