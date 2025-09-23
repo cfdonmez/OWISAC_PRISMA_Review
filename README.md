@@ -1,6 +1,10 @@
 # A Systematic Review of Cascaded OPA–RIS Architectures for NLoS Optical Wireless ISAC
 **Project Status:** Ongoing | **Last Updated:** 2025-09-23
+
+
 **Completed:** PRISMA-P preregistration (OSF DOI), search strategy (initial), extraction (Sheet1), QA log (current), review_structure mapping
+
+
 **Planned/In-Progress:** ROB rubric & SoF tables, automated synthesis tables, PRISMA flow image regeneration, expanded OPA/RIS/ISAC Results sections, benchmark box (turbulence), joint-metrics box (ISAC)
 
 [![PRISMA 2020 Compliant](https://img.shields.io/badge/PRISMA-2020-blue.svg)](https://www.prisma-statement.org/)
@@ -29,6 +33,7 @@ This repository documents a systematic review, conducted in accordance with **PR
 
 - **Last search completed:** 2025-09-17  
 - **Planned update cadence:** Quarterly (or on major field releases)
+- **Note on Technical Pillars.** The five axes (WD-JD, RC-PR-T, BN-RIS, RPB-Kol, HW-Q/CTRL) are **thematic synthesis axes**, not hard inclusion filters. They emerged during coding of included records to organize methods and trade-offs; the PRISMA eligibility criteria remain independent of these themes.
 
 ### Registration
 This review is preregistered at the **Open Science Framework (OSF)**.  
@@ -71,12 +76,15 @@ Peer-reviewed journals and full conference papers; high-quality preprints includ
 
 **Timeframe & Language**  
 2019—present; English. (Foundational pre-2019 OPA/metasurface items may enter via **backward/forward snowballing** if they inform cascaded OPA–RIS/ISAC.)
+**Snowballing Exception.** Foundational pre-2019 optical OPA/metasurface works can enter via **backward/forward snowballing** when directly informative for cascaded OPA→RIS/ISAC; such inclusions are flagged in `TRACE` and discussed in Methods.
 
 **Exclusion Rules**  
 - Pure **RF-only** RIS (non-optical) without optical results.  
 - Pure holography/SLM studies **without** OPA/RIS **and** without ISAC-relevant link/beam/sensing metrics.  
 - Vision/biomedical optics unrelated to comms/sensing link metrics.  
 - Patents/whitepapers without peer-reviewed methodological equivalents.
+
+**Retention Exceptions (Transparency).** Studies lacking explicit ISAC metrics (e.g., OPA sidelobe suppression without joint sensing/communication) may be **retained** if they inform cascaded OPA→RIS feasibility or beam/optics outcomes. Such records are flagged for **risk-of-bias** and excluded from any quantitative ISAC-metric synthesis subsets; they remain eligible for narrative synthesis.
 
 **Edge Notes (for transparency)**  
 When optical wavelength, aperture, or turbulence parameters are missing, the record is retained but flagged for **risk-of-bias** and excluded from any quantitative synthesis subset.
@@ -157,6 +165,8 @@ Our methodology strictly tracks the PRISMA 2020 four-stage process (Identificati
 - **Synthesis Approach:** Thematic synthesis mapped to the project’s **five technical pillars** (WD-JD, RC-PR-T, BN-RIS, RPB-Kol, HW-Q/CTRL). Mini meta-analyses are run only on homogeneous subsets; heterogeneous results are aggregated narratively with vote-counting of effect direction.  
 - **Reproducibility:** All analysis scripts live under `/scripts/analysis/` and regenerate tables/figures from `included_studies.csv`. Versioned queries live in `/protocol/search_strategy.md`.  
 - **Validation:** Run `python scripts/analysis/validate_included_studies.py data/included_studies.csv` before commits.
+- **Mapping to Manuscript Sections.** Each included record is mapped to a manuscript section via `/docs/review_structure.md` (e.g., OPA → Section 3.1; RIS → Section 3.2; NLoS-Turb → Section 4.1). The mapping file is versioned and updated with each extraction/QA cycle.
+
 
 <a id="data-items"></a>
 ## Data Items & Extraction
@@ -266,6 +276,9 @@ All included records are extracted into `/data/included_studies.csv` using the t
 2. Prefer the **main** scenario if multiple settings exist; mention alternates in `notes` (you can split per-scenario rows later).  
 3. Keep PDFs out of the repo; manage them in your reference manager; store persistent IDs in `doi_or_id`.
 
+### Pipeline Status (Reproducibility)
+All scripts under `/scripts/analysis/` are versioned and runnable. Generated artifacts under `/results/` are being expanded iteratively. Where a table/figure is listed but not yet present, it is **planned** and will be added with a date-stamped commit; interim manual tables are linked in `/supplementary_material.md`.
+
 ### 3.2. Automated Counts & Tables
 
 We auto-generate counts and synthesis tables from the CSVs:
@@ -285,10 +298,10 @@ make synth      # rebuild synthesis tables
 
 ### 3.3. Risk of Bias & Certainty of Evidence
 
-- **Risk-of-Bias rubric:** see `/protocol/risk_of_bias_tool.md` (ROB-TECH-Optics).  
+- **Risk-of-Bias rubric:** `/protocol/risk_of_bias_tool.md` (**planned**; draft rubric to be committed with initial ROB pass).
 - **ROB summaries:** `python scripts/analysis/rob_summary.py data/included_studies.csv`  
   → `results/synthesis_tables/rob_overall_counts.csv`, `results/synthesis_tables/rob_by_pillar.csv`.  
-- **Certainty (SoF):** `python scripts/analysis/build_sof_tables.py data/included_studies.csv`  
+- **Certainty (SoF):** planned; initial SoF tables will be generated after the first ROB pass. Heuristics are provisional and will be overrideable after manual review.
   → `results/synthesis_tables/SoF_pillars.csv` (simple heuristic based on % Low ROB per pillar).
 
 > Notes: We report ROB on the 3-level scale (low/some/high). SoF certainty labels (High/Moderate/Low) are derived heuristically and can be overridden after manual review.
@@ -296,7 +309,7 @@ make synth      # rebuild synthesis tables
 
 
 ## 4. Contribution & Open Science Statement
-- This review is the **first to explicitly synthesize the OPA–RIS architecture literature within the unified ISAC context using PRISMA 2020 standards**.
+- To the best of our knowledge, this is the first PRISMA-aligned synthesis that explicitly frames OPA–RIS architectures within a unified optical ISAC context; we welcome prior-art pointers via Issues.
 - All search strategies, data extraction, and synthesis code are published for transparency and reuse.
 - **Open Access:** All materials in this repo are freely available for academic use.  
 - **Data/Code Reuse Policy:** Cite this repo if you use the extraction templates, search protocols, or results in your own work.
