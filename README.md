@@ -1,5 +1,7 @@
 # A Systematic Review of Cascaded OPA–RIS Architectures for NLoS Optical Wireless ISAC
-**Project Status:** Ongoing | **Last Updated:** 2025-09-18
+**Project Status:** Ongoing | **Last Updated:** 2025-09-23
+**Completed:** PRISMA-P preregistration (OSF DOI), search strategy (initial), extraction (Sheet1), QA log (current), review_structure mapping
+**Planned/In-Progress:** ROB rubric & SoF tables, automated synthesis tables, PRISMA flow image regeneration, expanded OPA/RIS/ISAC Results sections, benchmark box (turbulence), joint-metrics box (ISAC)
 
 [![PRISMA 2020 Compliant](https://img.shields.io/badge/PRISMA-2020-blue.svg)](https://www.prisma-statement.org/)
 [![Protocol Registered](https://img.shields.io/badge/OSF-Registered-informational.svg)](https://doi.org/10.17605/OSF.IO/57VRJ)
