@@ -393,3 +393,15 @@ Community contributions and suggestions are welcome.
 **Data & QA Artifacts (Current):**
 - Extraction workbook: [data/extraction/review_ancor_outputs_with_QA_and_sections.xlsx](data/extraction/review_ancor_outputs_with_QA_and_sections.xlsx)
 - QA log (CSV): [data/qa_logs/qa_log.csv](data/qa_logs/qa_log.csv)
+<!-- BUILD_MANUSCRIPT_START -->
+## Build the manuscript from sections
+The manuscript is maintained under `manuscript/sections/`.
+
+Build the full article with:
+```bash
+python scripts/analysis/build_manuscript.py
+```
+
+The output `manuscript/full_article.md` is generated and not tracked by git.
+
+<!-- BUILD_MANUSCRIPT_END -->
