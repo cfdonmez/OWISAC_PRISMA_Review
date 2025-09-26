@@ -4,3 +4,5 @@
 ## 6. Discussion
 Key design lessons; gaps (HW quantization/speed, turbulence standards); RF→optik method transfer.
 
+## 7. Limitations
+## 8. Future Directions
