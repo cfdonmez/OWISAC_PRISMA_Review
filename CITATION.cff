@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: If you use this repository, please cite it as below.
+title: A Systematic Review of Cascaded OPA–RIS Architectures for NLoS Optical Wireless ISAC
+version: 0.1.0
+date-released: 2025-09-26
+authors:
+  - family-names: <Your-Surname>
+    given-names: <Your-Given-Names>
+doi: 10.0000/placeholder.doi
