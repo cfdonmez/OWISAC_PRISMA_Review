@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PRISMA Counts",
+  "type": "object",
+  "required": [
+    "identified","deduplicated","screened","excluded_title_abs",
+    "fulltext_assessed","fulltext_excluded","included_qual","included_quant"
+  ],
+  "properties": {
+    "identified": { "type": "integer", "minimum": 0 },
+    "deduplicated": { "type": "integer", "minimum": 0 },
+    "screened": { "type": "integer", "minimum": 0 },
+    "excluded_title_abs": { "type": "integer", "minimum": 0 },
+    "fulltext_assessed": { "type": "integer", "minimum": 0 },
+    "fulltext_excluded": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "included_qual": { "type": "integer", "minimum": 0 },
+    "included_quant": { "type": "integer", "minimum": 0 },
+    "last_updated": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
