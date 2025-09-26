@@ -60,6 +60,26 @@ def main():
     }
 
     # JSON
+    # --- PRISMA counts JSON schema validation (optional) ---
+    try:
+        import json, datetime
+        from jsonschema import validate, Draft202012Validator
+        import pathlib
+
+        schema_path = pathlib.Path(".meta/prisma_counts.schema.json")
+        if schema_path.exists():
+            with open(schema_path, "r", encoding="utf-8") as f:
+                schema = json.load(f)
+            # Add last_updated timestamp before validation
+            prisma["last_updated"] = datetime.datetime.utcnow().isoformat() + "Z"
+            Draft202012Validator.check_schema(schema)
+            validate(instance=prisma, schema=schema)
+            print("[ok] PRISMA counts validated against schema")
+        else:
+            print("[warn] schema not found: .meta/prisma_counts.schema.json (skipping validation)")
+    except Exception as e:
+        print(f"[error] schema validation failed: {e}")
+
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(prisma, f, indent=2, ensure_ascii=False)
 
