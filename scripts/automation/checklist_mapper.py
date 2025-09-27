@@ -1,15 +1,15 @@
 from pathlib import Path
 
-# Basit eşleme tablosu: item no -> ilgili section dosyası
+# Doğru ve güncel eşleme tablosu
 MAPPING = {
-    "Item 2": "manuscript/sections/00_abstract.md",
-    "Item 3": "manuscript/sections/01_introduction.md",
-    "Item 4": "manuscript/sections/01_introduction.md",
-    "Item 5": "manuscript/sections/02_methods.md",
-    "Item 6": "manuscript/sections/02_methods.md",
-    "Item 7": "manuscript/sections/02_methods.md",
-    "Item 8": "manuscript/sections/02_methods.md",
-    "Item 9": "manuscript/sections/02_methods.md",
+    "Item 2":  "manuscript/sections/00_abstract.md",
+    "Item 3":  "manuscript/sections/01_introduction.md",
+    "Item 4":  "manuscript/sections/01_introduction.md",
+    "Item 5":  "manuscript/sections/02_methods.md",
+    "Item 6":  "manuscript/sections/02_methods.md",
+    "Item 7":  "manuscript/sections/02_methods.md",
+    "Item 8":  "manuscript/sections/02_methods.md",
+    "Item 9":  "manuscript/sections/02_methods.md",
     "Item 10": "manuscript/sections/02_methods.md",
     "Item 11": "manuscript/sections/02_methods.md",
     "Item 12": "manuscript/sections/02_methods.md",
@@ -27,7 +27,7 @@ MAPPING = {
     "Item 24": "manuscript/sections/04_discussion.md",
     "Item 25": "manuscript/sections/06_acknowledgments.md",
     "Item 26": "manuscript/sections/06_acknowledgments.md",
-    "Item 27": "manuscript/sections/07_references.md",
+    "Item 27": "supplementary_material.md",
 }
 
 CHECKLIST = Path("protocol/prisma_checklist.md")
@@ -37,19 +37,21 @@ def main():
     if not CHECKLIST.exists():
         raise SystemExit("Missing protocol/prisma_checklist.md")
 
-    lines = []
+    out_lines = []
     for line in CHECKLIST.read_text(encoding="utf-8").splitlines():
-        added = False
+        stripped = line.strip()
+        matched = False
+        # 'Item 20:' gibi başlayan satırları yakala
         for item, path in MAPPING.items():
-            if line.strip().startswith(item):
-                lines.append(line)
-                lines.append(f"  ↳ Covered in: `{path}`")
-                added = True
+            if stripped.startswith(item):
+                out_lines.append(line)
+                out_lines.append(f"  ↳ Covered in: `{path}`")
+                matched = True
                 break
-        if not added:
-            lines.append(line)
+        if not matched:
+            out_lines.append(line)
 
-    OUT.write_text("\n".join(lines), encoding="utf-8")
+    OUT.write_text("\n".join(out_lines) + "\n", encoding="utf-8")
     print(f"[ok] Wrote mapped checklist to {OUT}")
 
 if __name__ == "__main__":
