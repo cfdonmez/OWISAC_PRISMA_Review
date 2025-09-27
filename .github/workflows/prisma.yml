@@ -1,0 +1,42 @@
+name: PRISMA pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  prisma:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # stable on Actions
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compute → Validate → Flow
+        run: |
+          python scripts/analysis/run_prisma_flow.py
+          ls -lh results/figures/
+
+      - name: Build manuscript
+        run: |
+          python scripts/analysis/build_manuscript.py
+          head -20 manuscript/full_article.md || true
+
+      - name: Upload artefacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: prisma-outputs
+          path: |
+            results/figures/prisma_flow.png
+            results/prisma_counts.json
+            manuscript/full_article.md
