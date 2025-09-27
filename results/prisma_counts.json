@@ -1,1 +1,11 @@
-{}
+{
+  "identified": 1200,
+  "deduplicated": 950,
+  "screened": 950,
+  "excluded_title_abs": 700,
+  "fulltext_assessed": 250,
+  "fulltext_excluded": { "out_of_scope": 120, "insufficient_methods": 45, "no_isac": 30 },
+  "included_qual": 55,
+  "included_quant": 25,
+  "last_updated": "2025-09-26T06:00:00Z"
+}
