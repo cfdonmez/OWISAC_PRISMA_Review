@@ -37,18 +37,18 @@ Item 18: Risk of bias in studies — Present risk of bias assessments.
 Item 19: Results of individual studies — Present summary statistics.
   ↳ Covered in: `manuscript/sections/03_results.md`
 Item 20: Results of syntheses — Present meta-analysis / synthesis results.
-  ↳ Covered in: `manuscript/sections/00_abstract.md`
+  ↳ Covered in: `manuscript/sections/03_results.md`
 Item 21: Reporting biases — Present assessments of reporting bias.
-  ↳ Covered in: `manuscript/sections/00_abstract.md`
+  ↳ Covered in: `manuscript/sections/03_results.md`
 Item 22: Certainty of evidence — Present certainty for outcomes.
-  ↳ Covered in: `manuscript/sections/00_abstract.md`
+  ↳ Covered in: `manuscript/sections/03_results.md`
 Item 23: Discussion — Interpret results in context of other evidence.
-  ↳ Covered in: `manuscript/sections/00_abstract.md`
+  ↳ Covered in: `manuscript/sections/04_discussion.md`
 Item 24: Limitations — Discuss limitations of evidence and review process.
-  ↳ Covered in: `manuscript/sections/00_abstract.md`
+  ↳ Covered in: `manuscript/sections/04_discussion.md`
 Item 25: Support — Describe sources of support/funding and role of sponsors.
-  ↳ Covered in: `manuscript/sections/00_abstract.md`
+  ↳ Covered in: `manuscript/sections/06_acknowledgments.md`
 Item 26: Competing interests — Declare any COI.
-  ↳ Covered in: `manuscript/sections/00_abstract.md`
+  ↳ Covered in: `manuscript/sections/06_acknowledgments.md`
 Item 27: Availability of data, code and other materials — State where available.
-  ↳ Covered in: `manuscript/sections/00_abstract.md`
+  ↳ Covered in: `supplementary_material.md`
