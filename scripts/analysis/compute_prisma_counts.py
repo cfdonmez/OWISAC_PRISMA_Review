@@ -39,7 +39,7 @@ def main():
         "fulltext_excluded": dict(reasons) if reasons else {},
         "included_qual": status_counts.get("included_qual", 0),
         "included_quant": status_counts.get("included_quant", 0),
-        "last_updated": datetime.datetime.utcnow().isoformat() + "Z",
+        "last_updated": datetime.datetime.now(datetime.UTC).isoformat().replace("+00:00","Z"),
     }
 
     OUT.parent.mkdir(exist_ok=True)
