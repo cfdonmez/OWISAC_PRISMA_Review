@@ -1,0 +1,46 @@
+title: "A Systematic Review of Cascaded OPA–RIS Architectures for NLoS Optical Wireless ISAC"
+short_title: "OPA–RIS for NLoS Optical ISAC"
+registrations:
+  osf: ""        # add link/DOI
+  prospero: ""   # add ID when available
+timeframe:
+  from: "2019-01-01"
+  to:   "2025-12-31"
+languages: ["English"]
+databases:
+  - name: "IEEE Xplore"
+    interface: "web"
+  - name: "Scopus"
+    interface: "web"
+  - name: "Web of Science"
+    interface: "web"
+  - name: "arXiv"
+    interface: "api"
+search:
+  queries:
+    - label: "OPA+RIS+ISAC"
+      string: '("optical phased array" OR OPA) AND (RIS OR metasurface) AND (ISAC OR "integrated sensing and communication")'
+  grey_literature: true
+  last_ran: ""   # ISO datetime
+eligibility:
+  inclusion:
+    - "Optical wireless ISAC or closely related optical sensing+comm"
+    - "OPA and/or RIS explicitly involved"
+    - "NLoS or blockage mitigation addressed"
+  exclusion:
+    - "Pure RF without optical adaptation"
+    - "Theoretical pieces without optical relevance"
+    - "No methods or performance metrics"
+research_questions:
+  - "RQ1: Which OPA–RIS designs enable reliable NLoS optical links under turbulence?"
+  - "RQ2: What sensing–communication trade-offs (SINR vs. contrast) emerge?"
+  - "RQ3: Which channel/propagation models are used and validated?"
+extraction_core_fields:
+  - "citation"
+  - "year"
+  - "architecture_components"
+  - "turbulence_params"
+  - "beamforming_strategy"
+  - "metrics:(SINR, contrast, BER, HPBW, PSL)"
+risk_of_bias_rubric: "protocol/risk_of_bias_tool.md"
+grade_template: "templates/GRADE_Assessment_Template.md"
