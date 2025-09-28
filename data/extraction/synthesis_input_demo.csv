@@ -1,0 +1,4 @@
+record_id,year,architecture_components,beamforming_strategy,turbulence_params,metric,value,unit
+R003,2023,"OPA+RIS","phase-only","Cn2=1e-14","SINR_dB",18.5,"dB"
+R003,2023,"OPA+RIS","phase-only","Cn2=1e-14","BER",1e-5,""
+R005,2024,"OPA→RIS cascade","hybrid (ampl+phase)","Cn2=5e-15","HPBW",0.8,"deg"

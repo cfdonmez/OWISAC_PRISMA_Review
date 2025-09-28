@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Synthesis Input",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["record_id","year","architecture_components","beamforming_strategy","metric","value","unit"],
+    "properties": {
+      "record_id": { "type": "string" },
+      "year": { "type": "integer", "minimum": 1900 },
+      "architecture_components": { "type": "string" },
+      "beamforming_strategy": { "type": "string" },
+      "turbulence_params": { "type": "string" },
+      "metric": { "type": "string" },
+      "value": { "type": "number" },
+      "unit": { "type": "string" }
+    },
+    "additionalProperties": false
+  }
+}
