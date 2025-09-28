@@ -420,3 +420,8 @@ The report must show:
 * `## Suggestions` → `None`
 
 <!-- DATA_VALIDATION_END -->
+<!-- PIPELINE_RUN_START -->
+```bash
+python scripts/run_pipeline.py
+<!-- PIPELINE_RUN_END -->
+
