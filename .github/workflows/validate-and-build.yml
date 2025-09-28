@@ -7,6 +7,10 @@ jobs:
     - uses: actions/checkout@v4
     - name: Validate CSVs
       run: python scripts/analysis/validate_included_studies.py data/included_studies.csv || true
+    - name: Validate data files
+      run: |
+        python scripts/analysis/validate_data_files.py
+        cat results/qa_data_report.txt
     - name: PRISMA Counts
       run: python scripts/analysis/prisma_counts.py data/screening_log.csv || true
     - name: Synthesis Tables
