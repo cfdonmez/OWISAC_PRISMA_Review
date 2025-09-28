@@ -22,6 +22,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Validate data files
+        run: |
+          python scripts/analysis/validate_data_files.py
+          cat results/qa_data_report.txt
+
       - name: Compute → Validate → Flow
         run: |
           python scripts/analysis/run_prisma_flow.py
