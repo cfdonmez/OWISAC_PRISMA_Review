@@ -1,75 +1,55 @@
-import csv, sys
+import csv
 from pathlib import Path
 
 SRC = Path("data/excluded_studies.csv")
-OUT = Path("data/excluded_studies_normalized.csv")
-BACKUP = Path("data/excluded_studies.backup.csv")
+DST = Path("data/excluded_studies_normalized.csv")
 
-ALLOWED = {
-    "out_of_scope","not_optical","no_opa_or_ris","no_nlos_or_turbulence",
-    "insufficient_methods","no_metrics","duplicate","not_substantial"
+MAP = {
+    "duplicate": "duplicate",
+    "non-optical": "not_optical",
+    "not optical": "not_optical",
+    "no opa": "no_opa_or_ris",
+    "no ris": "no_opa_or_ris",
+    "no nlos": "no_nlos_or_turbulence",
+    "no turbulence": "no_nlos_or_turbulence",
+    "out of scope": "out_of_scope",
+    "insufficient": "insufficient_methods",
+    "method": "insufficient_methods",
+    "no metric": "no_metrics",
+    "no key-physics": "no_metrics",
+    "not substantial": "not_substantial",
 }
 
-def normalize_reason_text(txt: str):
-    s = (txt or "").strip().lower()
-    if not s: return None
-    if "duplicate" in s or "dup." in s:
-        return "duplicate"
-    if "out of scope" in s:
-        return "out_of_scope"
-    if "non-optical" in s or "not optical" in s:
-        return "not_optical"
-    if "no opa" in s or "no ris" in s or "no optical ris" in s:
-        return "no_opa_or_ris"
-    if "no nlos" in s or "no turbulence" in s:
-        return "no_nlos_or_turbulence"
-    if "insufficient" in s or "method" in s:
-        return "insufficient_methods"
-    if "no metric" in s or "no key-physics" in s or "no key physics" in s:
-        return "no_metrics"
-    if "not substantial" in s:
-        return "not_substantial"
+def infer_code(txt: str) -> str | None:
+    s = (txt or "").lower()
+    for key, code in MAP.items():
+        if key in s:
+            return code
     return None
 
 def main():
     if not SRC.exists():
-        sys.exit("Missing data/excluded_studies.csv")
+        raise SystemExit("Missing data/excluded_studies.csv")
 
-    rows = []
     with SRC.open(newline='', encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        fieldnames = reader.fieldnames or []
-        has_reason_code = "reason_code" in fieldnames
-        if not has_reason_code:
-            fieldnames = fieldnames + ["reason_code"]
-        for r in reader:
-            code = (r.get("reason_code") or "").strip().lower()
-            if not code:
-                code = normalize_reason_text(r.get("reason",""))
-            # guardrail: only allow whitelisted codes
-            if code and code not in ALLOWED:
-                code = None
-            r["reason_code"] = code or ""
-            rows.append(r)
+        rows = list(csv.DictReader(f))
 
-    OUT.parent.mkdir(exist_ok=True)
-    with OUT.open("w", newline='', encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows)
+    # kolonları garanti et
+    fieldnames = list({*rows[0].keys(), "reason_code"}) if rows else ["record_id","reason","reason_code","notes"]
 
-    print(f"[ok] wrote normalized file: {OUT}")
+    for r in rows:
+        if not (r.get("reason_code") or "").strip():
+            code = infer_code(r.get("reason",""))
+            if code:
+                r["reason_code"] = code
 
-    # küçük özet
-    total = len(rows)
-    filled = sum(1 for r in rows if r.get("reason_code"))
-    print(f"[summary] rows: {total}, reason_code filled: {filled}, missing: {total - filled}")
+    DST.parent.mkdir(exist_ok=True)
+    with DST.open("w", newline='', encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+        w.writerows(rows)
 
-    # İstersen in-place güncelleme için güvenli bir kopya bırak
-    if not BACKUP.exists():
-        SRC.replace(BACKUP)  # orijinali yedekle
-        OUT.replace(SRC)     # normalize edilmişi ana dosyaya koy
-        print(f"[ok] replaced original with normalized and saved backup: {BACKUP}")
-    else:
-        print("[info] backup exists; not replacing originals automatically. Review OUT file.")
-        # Eğer BACKUP zaten varsa, bilinçli in-place yapmayı tercih et.
+    print(f"[ok] wrote {DST} (filled missing reason_code where possible)")
+
+if __name__ == "__main__":
+    main()
