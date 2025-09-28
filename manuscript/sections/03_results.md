@@ -7,3 +7,6 @@ Screened=578; Included=85 (PRISMA flow in results/).
 
 ### 5.2–5.7 (placeholders)
 Characteristics; Topology & HW; Channel & Turbulence; ISAC & Algorithms; Metrics & Gains; Subgroups/Sensitivity.
+
+
+<!-- INCLUDE: results/synthesis_tables/summary.md -->
