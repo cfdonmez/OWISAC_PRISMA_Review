@@ -1,3 +1,3 @@
-reason_code,notes,reason,record_id
-out_of_scope,,title/abstract not relevant to optical ISAC,R002
-not_optical,to be normalized,non-optical; no OPA or RIS,R004
+record_id,reason,reason_code,notes
+R002,"title/abstract not relevant to optical ISAC","out_of_scope",""
+R004,"non-optical; no OPA or RIS",,to be normalized
