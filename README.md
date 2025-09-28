@@ -405,3 +405,17 @@ python scripts/analysis/build_manuscript.py
 The output `manuscript/full_article.md` is generated and not tracked by git.
 
 <!-- BUILD_MANUSCRIPT_END -->
+
+<!-- DATA_VALIDATION_START -->
+
+## Validate data files
+Run automated checks for CSV schemas and reason codes:
+```bash
+
+python scripts/analysis/validate_data_files.py
+
+# report: results/qa_data_report.txt
+
+<!-- DATA_VALIDATION_START -->
+
+md
