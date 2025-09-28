@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 sections = [
     "00_abstract.md",
@@ -14,13 +15,25 @@ sections = [
 out_file = Path("manuscript/full_article.md")
 out_file.parent.mkdir(exist_ok=True)
 
+INCLUDE_RE = re.compile(r"<!--\s*INCLUDE:\s*(.+?)\s*-->")
+
+def expand_includes(text: str) -> str:
+    def repl(m):
+        p = Path(m.group(1))
+        if p.exists():
+            return p.read_text(encoding="utf-8").strip()
+        return f"<!-- MISSING INCLUDE: {p} -->"
+    return INCLUDE_RE.sub(repl, text)
+
 with out_file.open("w", encoding="utf-8") as out:
     for sec in sections:
         p = Path("manuscript/sections") / sec
         if p.exists():
-            out.write(p.read_text(encoding="utf-8").strip())
+            raw = p.read_text(encoding="utf-8").strip()
+            expanded = expand_includes(raw)
+            out.write(expanded)
             out.write("\n\n")
         else:
             out.write(f"<!-- Missing section: {sec} -->\n\n")
 
-print(f"[ok] Built {out_file}")
+print(f"[ok] Built {out_file} (includes expanded)")
