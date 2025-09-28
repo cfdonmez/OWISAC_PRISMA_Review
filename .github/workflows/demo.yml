@@ -1,0 +1,44 @@
+name: Demo pipeline (dummy data)
+
+on:
+  workflow_dispatch:  # Manuel tetikleme
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Seed dummy data
+        run: |
+          python scripts/demo/seed_dummy.py
+
+      - name: Validate data files
+        run: |
+          python scripts/analysis/validate_data_files.py
+          cat results/qa_data_report.txt
+
+      - name: Run full pipeline
+        run: |
+          python scripts/run_pipeline.py
+
+      - name: Upload artefacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-outputs
+          path: |
+            results/prisma_counts.json
+            results/figures/prisma_flow.png
+            results/synthesis_tables/summary.*
+            manuscript/full_article.md
