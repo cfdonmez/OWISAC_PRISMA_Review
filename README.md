@@ -425,3 +425,16 @@ The report must show:
 python scripts/run_pipeline.py
 <!-- PIPELINE_RUN_END -->
 
+
+<!-- INCLUDE_NOTE_START -->
+
+### Dynamic includes in manuscript sections
+
+You can embed generated content using:
+
+<!-- INCLUDE: path/to/file.md -->
+
+When `python scripts/analysis/build_manuscript.py` runs, these directives are expanded in-place.
+
+<!-- INCLUDE_NOTE_END -->
+
