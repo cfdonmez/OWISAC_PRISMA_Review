@@ -37,8 +37,10 @@ jobs:
           python scripts/analysis/synth_validate.py
           python scripts/analysis/synth_build_table.py
           python scripts/analysis/synth_build_subgroups.py
+          python scripts/analysis/synth_build_architectures.py
           sed -n "1,80p" results/synthesis_tables/summary.md
           sed -n "1,80p" results/synthesis_tables/subgroups.md
+          sed -n "1,80p" results/synthesis_tables/architectures.md
 
       - name: Build manuscript
         run: |
