@@ -1,6 +1,6 @@
 from pathlib import Path
 
-# Doğru ve güncel eşleme tablosu
+# Correct mapping: where each PRISMA item is covered in the manuscript
 MAPPING = {
     "Item 2":  "manuscript/sections/00_abstract.md",
     "Item 3":  "manuscript/sections/01_introduction.md",
@@ -41,9 +41,8 @@ def main():
     for line in CHECKLIST.read_text(encoding="utf-8").splitlines():
         stripped = line.strip()
         matched = False
-        # 'Item 20:' gibi başlayan satırları yakala
         for item, path in MAPPING.items():
-            if stripped.startswith(item):
+            if stripped.startswith(item + ":"):
                 out_lines.append(line)
                 out_lines.append(f"  ↳ Covered in: `{path}`")
                 matched = True

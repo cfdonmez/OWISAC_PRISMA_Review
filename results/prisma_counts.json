@@ -1,26 +1,14 @@
 {
-  "identified": 0,
+  "identified": 3,
   "deduplicated": 0,
-  "screened": 0,
-  "excluded_title_abs": 0,
-  "fulltext_assessed": 0,
+  "screened": 1,
+  "excluded_title_abs": 1,
+  "fulltext_assessed": 1,
   "fulltext_excluded": {
-    "non-optical; no opa; no optical ris; no cascaded opa\u2192ris; no nlos/turbulence; no metrics/key-physics": 123,
-    "non-optical; no opa; no optical ris; no cascaded opa\u2192ris; no nlos/turbulence; not substantial; no metrics/key-physics": 37,
-    "non-optical; no opa; no optical ris; no cascaded opa\u2192ris; no nlos/turbulence": 251,
-    "non-optical; no opa; no optical ris; no cascaded opa\u2192ris": 30,
-    "non-optical; no opa; no optical ris; no cascaded opa\u2192ris; no metrics/key-physics": 10,
-    "non-optical; no opa; no optical ris; no cascaded opa\u2192ris; not substantial; no metrics/key-physics": 1,
-    "no opa; no optical ris; no cascaded opa\u2192ris; no nlos/turbulence; no metrics/key-physics": 13,
-    "no opa; no optical ris; no cascaded opa\u2192ris; no nlos/turbulence": 12,
-    "no opa; no cascaded opa\u2192ris; no nlos/turbulence; no metrics/key-physics": 2,
-    "no opa; no optical ris; no cascaded opa\u2192ris": 7,
-    "no optical ris; no cascaded opa\u2192ris; no nlos/turbulence; no metrics/key-physics": 1,
-    "no optical ris; no cascaded opa\u2192ris; no nlos/turbulence": 1,
-    "no opa; no optical ris; no cascaded opa\u2192ris; no nlos/turbulence; not substantial; no metrics/key-physics": 2,
-    "no opa; no optical ris; no cascaded opa\u2192ris; no metrics/key-physics": 3
+    "title/abstract not relevant to optical isac": 1,
+    "non-optical; no opa or ris": 1
   },
-  "included_qual": 0,
+  "included_qual": 1,
   "included_quant": 0,
-  "last_updated": "2025-09-28T00:00:04.137075Z"
+  "last_updated": "2025-09-29T20:28:31.321826Z"
 }

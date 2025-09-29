@@ -22,21 +22,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Validate data files
-        run: |
-          python scripts/analysis/validate_data_files.py
-          cat results/qa_data_report.txt
-
       - name: Compute → Validate → Flow
         run: |
           python scripts/analysis/run_prisma_flow.py
           ls -lh results/figures/
-
-      - name: Synthesis validate & build
-        run: |
-          python scripts/analysis/synth_validate.py
-          python scripts/analysis/synth_build_table.py
-          sed -n "1,80p" results/synthesis_tables/summary.md
 
       - name: Build manuscript
         run: |
