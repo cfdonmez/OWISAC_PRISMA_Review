@@ -7,6 +7,7 @@ STEPS = [
   ("Build PRISMA flow figure",           [sys.executable, "scripts/analysis/make_prisma_flow.py"]),
   ("Synthesis validate",                 [sys.executable, "scripts/analysis/synth_validate.py"]),
   ("Synthesis build tables",             [sys.executable, "scripts/analysis/synth_build_table.py"]),
+  ("Synthesis build subgroups",          [sys.executable, "scripts/analysis/synth_build_subgroups.py"]),
   ("Build manuscript",                   [sys.executable, "scripts/analysis/build_manuscript.py"]),
 ]
 
