@@ -11,3 +11,5 @@ Characteristics; Topology & HW; Channel & Turbulence; ISAC & Algorithms; Metrics
 
 <!-- INCLUDE: results/synthesis_tables/summary.md -->
 <!-- INCLUDE: results/snippets/prisma_counts.md -->
+
+<!-- INCLUDE: results/synthesis_tables/subgroups.md -->
