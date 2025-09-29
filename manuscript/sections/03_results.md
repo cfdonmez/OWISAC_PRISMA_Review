@@ -14,3 +14,4 @@ Characteristics; Topology & HW; Channel & Turbulence; ISAC & Algorithms; Metrics
 
 <!-- INCLUDE: results/synthesis_tables/subgroups.md -->
 <!-- INCLUDE: results/synthesis_tables/architectures.md -->
+<!-- INCLUDE: results/synthesis_tables/rob_summary.md -->

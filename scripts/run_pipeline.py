@@ -9,6 +9,7 @@ STEPS = [
   ("Synthesis build tables",             [sys.executable, "scripts/analysis/synth_build_table.py"]),
   ("Synthesis build subgroups",          [sys.executable, "scripts/analysis/synth_build_subgroups.py"]),
   ("Synthesis build architectures",      [sys.executable, "scripts/analysis/synth_build_architectures.py"]),
+  ("Build RoB summary",                  [sys.executable, "scripts/analysis/rob_build_summary.py"]),
   ("Build manuscript",                   [sys.executable, "scripts/analysis/build_manuscript.py"]),
 ]
 
