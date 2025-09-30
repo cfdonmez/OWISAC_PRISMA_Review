@@ -1,0 +1,100 @@
+path,filename,file_type
+.gitignore,.gitignore,Configuration
+CITATION.cff,CITATION.cff,Documentation
+CONTRIBUTING.md,CONTRIBUTING.md,Documentation
+LICENSE,LICENSE,License
+README.md,README.md,Documentation
+requirements.txt,requirements.txt,Configuration
+supplementary_material.md,supplementary_material.md,Documentation
+config/review.yml,review.yml,YAML Configuration
+data/batch1_selection_preview.csv,batch1_selection_preview.csv,CSV Data
+data/elicit_v1_2025-09-18.csv,elicit_v1_2025-09-18.csv,CSV Data
+data/elicit_v1_2025-09-18.xlsx,elicit_v1_2025-09-18.xlsx,Excel Data
+data/excluded_studies.csv,excluded_studies.csv,CSV Data
+data/included_studies_seed.csv,included_studies_seed.csv,CSV Data
+data/included_studies.csv,included_studies.csv,CSV Data
+data/screening_log.csv,screening_log.csv,CSV Data
+data/_backup/excluded_studies.csv.bak,excluded_studies.csv.bak,Backup File
+data/_backup/excluded_studies.csv.bak.20250929003418,excluded_studies.csv.bak.20250929003418,Backup File
+data/_backup/included_studies.csv.bak,included_studies.csv.bak,Backup File
+data/_backup/included_studies.csv.bak.20250929003418,included_studies.csv.bak.20250929003418,Backup File
+data/_backup/screening_log.csv.bak,screening_log.csv.bak,Backup File
+data/_backup/screening_log.csv.bak.20250929003418,screening_log.csv.bak.20250929003418,Backup File
+data/extraction/readme.md,readme.md,Documentation
+data/extraction/review_ancor_outputs - Sheet1.csv,review_ancor_outputs - Sheet1.csv,CSV Data
+data/extraction/review_ancor_outputs_with_QA_and_sections.xlsx,review_ancor_outputs_with_QA_and_sections.xlsx,Excel Data
+data/extraction/sheet1_with_bucket_and_QA.csv,sheet1_with_bucket_and_QA.csv,CSV Data
+data/extraction/synthesis_input_demo.csv,synthesis_input_demo.csv,CSV Data
+data/master/final_extraction_PLACEHOLDER.xlsx,final_extraction_PLACEHOLDER.xlsx,Excel Data
+data/master/readme.md,readme.md,Documentation
+data/qa_logs/qa_log.csv,qa_log.csv,CSV Data
+data/qa_logs/rm.md,rm.md,Documentation
+docs/Automation_Guide.md,Automation_Guide.md,Documentation
+docs/README.md,README.md,Documentation
+docs/review_structure.md,review_structure.md,Documentation
+docs/PRISMA_statement/links.md,links.md,Documentation
+docs/PRISMA_statement/README.md,README.md,Documentation
+manuscript/review_article.md,review_article.md,Documentation
+manuscript/sections/00_abstract.md,00_abstract.md,Documentation
+manuscript/sections/01_introduction.md,01_introduction.md,Documentation
+manuscript/sections/02_methods.md,02_methods.md,Documentation
+manuscript/sections/03_results.md,03_results.md,Documentation
+manuscript/sections/04_discussion.md,04_discussion.md,Documentation
+manuscript/sections/05_conclusion.md,05_conclusion.md,Documentation
+manuscript/sections/06_acknowledgments.md,06_acknowledgments.md,Documentation
+manuscript/sections/07_references.md,07_references.md,Documentation
+protocol/AMENDMENTS.md,AMENDMENTS.md,Documentation
+protocol/codebook.md,codebook.md,Documentation
+protocol/data_extraction_form.xlsx,data_extraction_form.xlsx,Excel Data
+protocol/prisma_checklist_mapped.md,prisma_checklist_mapped.md,Documentation
+protocol/prisma_checklist.md,prisma_checklist.md,Documentation
+protocol/prisma_protocol.md,prisma_protocol.md,Documentation
+protocol/risk_of_bias_tool.md,risk_of_bias_tool.md,Documentation
+protocol/search_strategy.md,search_strategy.md,Documentation
+results/prisma_counts.json,prisma_counts.json,JSON Data
+results/qa_data_report.txt,qa_data_report.txt,Text Data
+results/README.md,README.md,Documentation
+results/figures/.gitkeep,.gitkeep,Configuration
+results/figures/prisma_flow.png,prisma_flow.png,Image
+results/snippets/prisma_counts.md,prisma_counts.md,Documentation
+results/synthesis_tables/architectures.csv,architectures.csv,CSV Data
+results/synthesis_tables/architectures.md,architectures.md,Documentation
+results/synthesis_tables/README.md,README.md,Documentation
+results/synthesis_tables/rob_summary.md,rob_summary.md,Documentation
+results/synthesis_tables/subgroups.csv,subgroups.csv,CSV Data
+results/synthesis_tables/subgroups.md,subgroups.md,Documentation
+results/synthesis_tables/summary.csv,summary.csv,CSV Data
+results/synthesis_tables/summary.md,summary.md,Documentation
+results/synthesis_tables/tablesreadme.md,tablesreadme.md,Documentation
+scripts/run_pipeline.py,run_pipeline.py,Python Script
+scripts/analysis/analreadme.md,analreadme.md,Documentation
+scripts/analysis/build_manuscript.py,build_manuscript.py,Python Script
+scripts/analysis/compute_prisma_counts.py,compute_prisma_counts.py,Python Script
+scripts/analysis/excluded_reasons.py,excluded_reasons.py,Python Script
+scripts/analysis/insert_counts_snippet.py,insert_counts_snippet.py,Python Script
+scripts/analysis/instructions.md,instructions.md,Documentation
+scripts/analysis/make_prisma_flow.py,make_prisma_flow.py,Python Script
+scripts/analysis/normalize_excluded.py,normalize_excluded.py,Python Script
+scripts/analysis/notebooklm_instructions,notebooklm_instructions,Documentation
+scripts/analysis/objectivecsv,objectivecsv,CSV Data
+scripts/analysis/prisma_counts.py,prisma_counts.py,Python Script
+scripts/analysis/rob_build_summary.py,rob_build_summary.py,Python Script
+scripts/analysis/rob_summary.py,rob_summary.py,Python Script
+scripts/analysis/run_prisma_flow.py,run_prisma_flow.py,Python Script
+scripts/analysis/synth_build_architectures.py,synth_build_architectures.py,Python Script
+scripts/analysis/synth_build_subgroups.py,synth_build_subgroups.py,Python Script
+scripts/analysis/synth_build_table.py,synth_build_table.py,Python Script
+scripts/analysis/synth_make_tables.py,synth_make_tables.py,Python Script
+scripts/analysis/synth_validate.py,synth_validate.py,Python Script
+scripts/analysis/validate_data_files.py,validate_data_files.py,Python Script
+scripts/analysis/validate_included_studies.py,validate_included_studies.py,Python Script
+scripts/analysis/validate_prisma_counts.py,validate_prisma_counts.py,Python Script
+scripts/automation/checklist_mapper.py,checklist_mapper.py,Python Script
+scripts/automation/protocol_sync.py,protocol_sync.py,Python Script
+scripts/demo/seed_dummy.py,seed_dummy.py,Python Script
+templates/Data_Extraction_Template.md,Data_Extraction_Template.md,Documentation
+templates/GRADE_Assessment_Template.md,GRADE_Assessment_Template.md,Documentation
+templates/Implementation_Roadmap.md,Implementation_Roadmap.md,Documentation
+templates/PRISMA_2020_Complete_Guide.md,PRISMA_2020_Complete_Guide.md,Documentation
+templates/PROSPERO_Registration_Template.md,PROSPERO_Registration_Template.md,Documentation
+templates/Risk_of_Bias_Assessment_Template.md,Risk_of_Bias_Assessment_Template.md,Documentation
