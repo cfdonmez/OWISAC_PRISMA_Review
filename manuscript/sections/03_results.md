@@ -3,7 +3,9 @@
 
 ## 5. Results
 ### 5.1 Study Selection
-Screened=578; Included=85 (PRISMA flow in results/).
+Screened=578; Included=85.
+
+<!-- INCLUDE: results/figures/prisma_flow.png -->
 
 ### 5.2–5.7 (placeholders)
 Characteristics; Topology & HW; Channel & Turbulence; ISAC & Algorithms; Metrics & Gains; Subgroups/Sensitivity.
