@@ -17,9 +17,20 @@ databases:
   - name: "arXiv"
     interface: "api"
 search:
+  keyword_groups:
+    opa: '("optical phased array" OR OPA OR "photonic phased array")'
+    ris: '(RIS OR "reconfigurable intelligent surface" OR "intelligent reflecting surface" OR "optical metasurface" OR "programmable metasurface")'
+    isac: '(ISAC OR "integrated sensing and communication" OR "joint sensing and communication" OR "dual-function communication sensing")'
+    context: '("optical wireless" OR OWC OR "free space optical" OR FSO)'
   queries:
-    - label: "OPA+RIS+ISAC"
-      string: '("optical phased array" OR OPA) AND (RIS OR metasurface) AND (ISAC OR "integrated sensing and communication")'
+    - label: "Ideal Intersection (OPA+RIS+ISAC)"
+      string: '{{opa}} AND {{ris}} AND {{isac}}'
+    - label: "OPA + ISAC"
+      string: '{{opa}} AND {{isac}} AND {{context}}'
+    - label: "RIS + ISAC"
+      string: '{{ris}} AND {{isac}} AND {{context}}'
+    - label: "OPA + RIS"
+      string: '{{opa}} AND {{ris}} AND {{context}}'
   grey_literature: true
   last_ran: ""   # ISO datetime
 eligibility:
