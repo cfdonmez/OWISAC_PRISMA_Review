@@ -1,0 +1,63 @@
+# Cline Memory Bank Custom Instructions — OWISAC_PRISMA_Review
+
+[context]
+memory_bank_dir=memory-bank
+brief=${memory_bank_dir}/projectbrief.md
+product=${memory_bank_dir}/productContext.md
+active=${memory_bank_dir}/activeContext.md
+patterns=${memory_bank_dir}/systemPatterns.md
+tech=${memory_bank_dir}/techContext.md
+progress=${memory_bank_dir}/progress.md
+
+[goals]
+primary=Produce a PRISMA 2020–compliant systematic review manuscript and reproducible synthesis tables for OW-ISAC (OPA→RIS) under NLoS/turbulence.
+
+[behaviors]
+- Always read ${brief}, ${product}, ${tech} once per session.
+- At each new task: append a short "Now" section in ${active} (status, blockers, next actions).
+- When automations/scripts are run, summarize deltas into ${progress}.
+- Prefer commands that reproduce results (no manual edits to generated files).
+- If a requested output conflicts with PRISMA or repo structure, explain and propose a compliant alternative.
+
+[tasks.initialize]
+description=Initialize memory bank for this project
+steps=
+  - Ensure all memory-bank/*.md exist; create if missing
+  - Summarize current repo status into ${active}
+  - Confirm runnable pipeline: `python scripts/run_pipeline.py`
+  - Log completion into ${progress}
+
+[tti.prisma_counts]
+trigger=User says: "update counts", "refresh prisma", "run pipeline"
+do=
+  - Run: `python scripts/run_pipeline.py`
+  - Read: results/prisma_counts.json
+  - Update: results/snippets/prisma_counts.md
+  - Note in ${progress}
+
+[tti.synthesis_tables]
+trigger=User says: "build synthesis", "update synthesis tables"
+do=
+  - Run: `python scripts/analysis/synth_build_subgroups.py`
+  - Run: `python scripts/analysis/synth_build_architectures.py`
+  - Verify outputs in results/synthesis_tables/
+  - Note in ${progress}
+
+[tti.fill_doi]
+trigger=User says: "fill missing DOI", "resolve metadata"
+do=
+  - Run: `scripts/utility/fill_doi_plus_semantics.py` on target CSV
+  - Backoff on 429; sources order: Crossref→arXiv→OpenAlex→Semantic Scholar
+  - Write enriched fields back to CSV
+  - Note in ${progress}
+
+[quality]
+- Cite concrete paths and commands.
+- Do not hallucinate file contents; if missing, propose creation steps.
+- Keep edits minimal & auditable; prefer PR-style diffs if large.
+
+[style]
+- Short, academic, stepwise.
+- Use checklists for actions; tables for results.
+
+[end]
