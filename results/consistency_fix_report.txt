@@ -1,0 +1,5 @@
+[fix] screening_log.csv → fulltext_excluded eksikleri tamamlandı: +2
+[warn] included_studies.csv eksik kart(lar): R003
+       → Bu kayıtlar için bibliyografik alanları doldurarak included_studies.csv’ye satır ekleyin.
+[warn] search_log.csv boş; PRISMA-S’e göre 'Identified' kutusunu doldurmak için en az bir arama satırı ekleyin.
+       → Alanlar: search_run_id, source_db, platform, query_string, date_ran, results_n

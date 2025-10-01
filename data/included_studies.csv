@@ -1,1 +1,2 @@
 record_id,citation,title,authors,year,venue,pub_type,peer_reviewed,doi,url
+R003,"Surname A., Surname B. (2024). Paper title. Journal/Conf.",Paper title,Surname A.; Surname B.,2024,Journal of X,journal,true,10.1234/xyz.2024.001,https://doi.org/10.1234/xyz.2024.001

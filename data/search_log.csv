@@ -1,1 +1,2 @@
 search_run_id,source_db,platform,query_string,date_ran,results_n
+srch_2025_10_02_01,IEEE Xplore,web,"(optical phased array) AND (reconfigurable intelligent surface) AND (NLoS)",2025-10-02T20:30:00Z,128

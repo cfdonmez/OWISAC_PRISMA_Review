@@ -1,14 +1,25 @@
 {
-  "identified": 3,
-  "deduplicated": 0,
-  "screened": 1,
-  "excluded_title_abs": 1,
-  "fulltext_assessed": 1,
-  "fulltext_excluded": {
-    "title/abstract not relevant to optical isac": 1,
-    "non-optical; no opa or ris": 1
+  "identified": {
+    "db_registers_total": 128,
+    "other_sources_total": 0
   },
-  "included_qual": 1,
-  "included_quant": 0,
-  "last_updated": "2025-10-01T20:06:17.297039Z"
+  "removed_before_screening": {
+    "duplicates": 0,
+    "automated": 0,
+    "other": 0
+  },
+  "screening": {
+    "records_screened_tiab": 1,
+    "records_excluded_tiab": 1
+  },
+  "eligibility": {
+    "fulltexts_assessed": 3,
+    "reports_sought_for_retrieval": null,
+    "reports_not_retrieved": null
+  },
+  "included": {
+    "studies_included_total": 1,
+    "qualitative": 1,
+    "quantitative": 0
+  }
 }

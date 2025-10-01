@@ -1,8 +1,11 @@
-### PRISMA Counts Summary (auto)
-
-We identified **3** records; screened **1**; assessed **1** full texts;
-excluded **1** at title/abstract; and included **1** qualitatively and **0** quantitatively.
-
-**Full-text exclusion reasons:**
-- non-optical; no opa or ris — 1
-- title/abstract not relevant to optical isac — 1
+## PRISMA 2020 Flow — Counts
+- Identified (DB/registers): **128**
+- Removed before screening — Duplicates: **0**, Automated: **0**
+- Records screened (TIAB): **1**
+- Records excluded (TIAB): **1**
+- Reports assessed for eligibility (full-text): **3**
+- Full-text excluded with reasons: **2**
+  - Reasons:
+    - out_of_scope: **1**
+    - reason_unclassified: **1**
+- Studies included in review: **1** (qual: 1, quant: 0)

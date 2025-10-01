@@ -1,13 +1,13 @@
 # QA Data Report (schema)
 
 ## Özet
-- screening_log.csv: 7 satır, 8 kolon
+- screening_log.csv: 9 satır, 8 kolon
 - excluded_studies.csv: 2 satır, 5 kolon
-- included_studies.csv: 0 satır, 10 kolon
-- search_log.csv: 0 satır, 6 kolon
+- included_studies.csv: 1 satır, 10 kolon
+- search_log.csv: 1 satır, 6 kolon
 - dedup_log.csv: 0 satır, 5 kolon
 - automation_log.csv: 0 satır, 5 kolon
 
-Toplam satır: 9
+Toplam satır: 13
 
 ✅ Şema denetimi: Hata bulunmadı.

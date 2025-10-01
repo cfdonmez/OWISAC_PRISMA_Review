@@ -61,3 +61,67 @@
 **Next Actions:**
 - Yapılan değişiklikleri `progress.md` dosyasına kaydetmek.
 - Kullanıcıdan gelecek yeni talimatları beklemek.
+
+---
+
+## Now (2025-10-02 01:22)
+
+**Status:**
+- Adım 3 tamamlandı: PRISMA akış sayımları otomatik olarak üretildi.
+- `scripts/analysis/compute_prisma_counts.py` dosyası oluşturuldu ve çalıştırıldı.
+- `results/prisma_counts.json` ve `results/snippets/prisma_counts.md` dosyaları başarıyla oluşturuldu.
+
+**Blockers:**
+- Yok.
+
+**Next Actions:**
+- Yapılan değişiklikleri `memory-bank/progress.md` dosyasına kaydetmek.
+- Kullanıcıdan gelecek yeni talimatları beklemek.
+
+---
+
+## Now (2025-10-02 01:32)
+
+**Status:**
+- PRISMA 2020 tutarlılık düzeltici betik (`scripts/qa/fix_consistency.py`) oluşturuldu ve çalıştırıldı.
+- Veri doğrulama (`scripts/qa/validate_data.py`) ve PRISMA sayım hesaplama (`scripts/analysis/compute_prisma_counts.py`) betikleri tekrar çalıştırıldı.
+- `results/consistency_fix_report.txt` raporu oluşturuldu.
+
+**Blockers:**
+- Yok.
+
+**Next Actions:**
+- Yapılan değişiklikleri `memory-bank/progress.md` dosyasına kaydetmek.
+- Kullanıcıdan gelecek yeni talimatları beklemek.
+
+---
+
+## Now (2025-10-02 01:43)
+
+**Status:**
+- `included_studies.csv` dosyasına R003 kartı eklendi.
+- `search_log.csv` dosyasına örnek bir arama satırı eklendi.
+- Veri doğrulama (`scripts/qa/validate_data.py`) ve PRISMA sayım hesaplama (`scripts/analysis/compute_prisma_counts.py`) betikleri tekrar çalıştırıldı.
+
+**Blockers:**
+- Yok.
+
+**Next Actions:**
+- Yapılan değişiklikleri `memory-bank/progress.md` dosyasına kaydetmek.
+- Kullanıcıdan gelecek yeni talimatları beklemek.
+
+---
+
+## Now (2025-10-02 01:48)
+
+**Status:**
+- Adım 4 tamamlandı: PRISMA akış diyagramı JSON'dan otomatik olarak çizildi.
+- `scripts/analysis/render_prisma_flow.py` dosyası oluşturuldu ve çalıştırıldı.
+- `docs/prisma_flow.md` dosyası başarıyla oluşturuldu.
+
+**Blockers:**
+- Yok.
+
+**Next Actions:**
+- Yapılan değişiklikleri `memory-bank/progress.md` dosyasına kaydetmek.
+- Kullanıcıdan gelecek yeni talimatları beklemek.
