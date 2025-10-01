@@ -125,3 +125,19 @@
 **Next Actions:**
 - Yapılan değişiklikleri `memory-bank/progress.md` dosyasına kaydetmek.
 - Kullanıcıdan gelecek yeni talimatları beklemek.
+
+---
+
+## Now (2025-10-02 01:58)
+
+**Status:**
+- `scripts/analysis/render_prisma_flow.py` dosyası, GitHub'ın Mermaid güvenlik seviyesi "strict" ile uyumlu olacak şekilde güncellendi. HTML etiketleri (`<br/>`) kaldırıldı ve `&` karakteri `and` ile değiştirildi.
+- `scripts/analysis/render_prisma_flow.py` betiği tekrar çalıştırıldı ve `docs/prisma_flow.md` dosyası güncellendi.
+
+**Blockers:**
+- Yok.
+
+**Next Actions:**
+- Yapılan değişiklikleri `memory-bank/progress.md` dosyasına kaydetmek.
+- Değişiklikleri GitHub'a pushlamak.
+- Kullanıcıdan gelecek yeni talimatları beklemek.

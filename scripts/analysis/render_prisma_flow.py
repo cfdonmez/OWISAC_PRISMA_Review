@@ -53,18 +53,17 @@ if Path("data/excluded_studies.csv").exists():
 # Mermaid şablonu
 mermaid = f"""```mermaid
 flowchart TD
-  A[Records identified<br/>(databases & registers)<br/>n={id_db}]:::box
-  R[Records removed before screening<br/>duplicates: {dup}<br/>automated: {auto}<br/>other: {oth}]:::box
-  S[Records screened (title/abstract)<br/>n={scrn}]:::box
-  X[Records excluded (title/abstract)<br/>n={tiab_ex}]:::box
-  E[Reports assessed for eligibility (full-text)<br/>n={elig}]:::box
-  F[Reports excluded (full-text, with reasons){f"<br/>n={fx_total}" if fx_total else ""}]:::box
-  I[Studies included in review<br/>total: {inc_total}<br/>qual: {inc_qual} | quant: {inc_quant}]:::box
+  A[Records identified (databases and registers): n={id_db}]:::box
+  R[Records removed before screening: duplicates {dup}, automated {auto}, other {oth}]:::box
+  S[Records screened (title/abstract): n={scrn}]:::box
+  X[Records excluded (title/abstract): n={tiab_ex}]:::box
+  E[Reports assessed for eligibility (full-text): n={elig}]:::box
+  F[Reports excluded (full-text, with reasons){f": n={fx_total}" if fx_total else ""}]:::box
+  I[Studies included in review: total {inc_total}; qual {inc_qual}; quant {inc_quant}]:::box
 
   A --> R --> S -->|screened| E --> I
   S --> X
   E --> F
-{"  RS[Reports sought for retrieval<br/>n="+str(sought)+"]:::box\n  E---RS" if sought is not None else ""}{"\n  RN[Reports not retrieved<br/>n="+str(notret)+"]:::box\n  RS --> RN" if notret is not None else ""}
 
   classDef box fill:#f9f9f9,stroke:#999,stroke-width:1px,color:#000;
 ```"""

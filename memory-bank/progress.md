@@ -77,3 +77,14 @@
 - **Details:**
   - `scripts/analysis/render_prisma_flow.py` script was created and executed.
   - `docs/prisma_flow.md` was successfully generated, containing the Mermaid diagram of the PRISMA 2020 flow.
+
+---
+
+## 2025-10-02 02:00
+
+- **Task:** Patch `render_prisma_flow.py` for GitHub-safe Mermaid and push changes
+- **Status:** Completed
+- **Details:**
+  - `scripts/analysis/render_prisma_flow.py` was patched to remove HTML tags and replace `&` with `and` for GitHub Mermaid compatibility.
+  - The script was re-executed, updating `docs/prisma_flow.md`.
+  - All changes were staged, committed with message "feat: Implement PRISMA flow counts, consistency fixer, and flow diagram generation", and pushed to GitHub.
