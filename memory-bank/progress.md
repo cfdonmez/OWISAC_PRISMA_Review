@@ -24,3 +24,14 @@
     - `search_log.csv`
     - `dedup_log.csv`
     - `automation_log.csv`
+
+---
+
+## 2025-10-02 01:10
+
+- **Task:** Fix `screening_log.csv` uniqueness rule in `validate_data.py`
+- **Status:** Completed
+- **Details:**
+  - The `check_screening_composite_key` function in `scripts/qa/validate_data.py` was replaced with a new version.
+  - The new function correctly handles the PRISMA 2020 flow, allowing for `fulltext_assessed` and a final decision (included/excluded) in the `fulltext` stage without raising a uniqueness error.
+  - The `scripts/qa/validate_data.py` script was executed, and the `results/qa_data_report.txt` confirmed that no errors were found.

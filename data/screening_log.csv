@@ -1,8 +1,8 @@
-record_id,source_db,status,decided_by,decided_at
-R001,IEEE Xplore,identified,CD,2025-09-26T10:00:00Z
-R001,IEEE Xplore,screened,CD,2025-09-26T10:10:00Z
-R002,Scopus,identified,CD,2025-09-26T10:05:00Z
-R002,Scopus,excluded_title_abs,CD,2025-09-26T10:20:00Z
-R003,Web of Science,identified,CD,2025-09-26T10:15:00Z
-R003,Web of Science,fulltext_assessed,CD,2025-09-26T10:45:00Z
-R003,Web of Science,included_qual,CD,2025-09-26T11:00:00Z
+record_id,source_db,status,decided_by,decided_at,stage,decision,automation_flag
+R001,IEEE Xplore,identified,CD,2025-09-26T10:00:00Z,,,
+R001,IEEE Xplore,screened,CD,2025-09-26T10:10:00Z,,,
+R002,Scopus,identified,CD,2025-09-26T10:05:00Z,,,
+R002,Scopus,excluded_title_abs,CD,2025-09-26T10:20:00Z,tiab,exclude,
+R003,Web of Science,identified,CD,2025-09-26T10:15:00Z,,,
+R003,Web of Science,fulltext_assessed,CD,2025-09-26T10:45:00Z,fulltext,,
+R003,Web of Science,included_qual,CD,2025-09-26T11:00:00Z,fulltext,include,

@@ -29,3 +29,35 @@
 **Next Actions:**
 - Yapılan değişiklikleri `progress.md` dosyasına kaydetmek.
 - Kullanıcıdan gelecek yeni talimatları beklemek.
+
+---
+
+## Now (2025-10-02 12:04)
+
+**Status:**
+- Adım 2'ye başlandı: Şema uyum düzeltmesi ve validator yamaları.
+
+**Blockers:**
+- Yok.
+
+**Next Actions:**
+- `data/search_log.csv` ve `data/dedup_log.csv` başlıklarını düzelt.
+- `scripts/qa/validate_data.py` dosyasını yamala.
+- `data/included_studies.csv` başlığını genişlet.
+- `scripts/qa/validate_data.py` betiğini çalıştırarak değişiklikleri doğrula.
+
+---
+
+## Now (2025-10-02 01:10)
+
+**Status:**
+- `scripts/qa/validate_data.py` dosyasındaki `check_screening_composite_key` fonksiyonu, PRISMA 2020 uyumluluğu için güncellendi.
+- `screening_log.csv` için (record_id, stage) tekillik hatası düzeltildi.
+- Veri doğrulama betiği başarıyla çalıştırıldı ve hata bulunmadı.
+
+**Blockers:**
+- Yok.
+
+**Next Actions:**
+- Yapılan değişiklikleri `progress.md` dosyasına kaydetmek.
+- Kullanıcıdan gelecek yeni talimatları beklemek.
