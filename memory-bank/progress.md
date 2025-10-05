@@ -88,3 +88,23 @@
   - `scripts/analysis/render_prisma_flow.py` was patched to remove HTML tags and replace `&` with `and` for GitHub Mermaid compatibility.
   - The script was re-executed, updating `docs/prisma_flow.md`.
   - All changes were staged, committed with message "feat: Implement PRISMA flow counts, consistency fixer, and flow diagram generation", and pushed to GitHub.
+
+---
+
+## 2025-10-05 10:27
+
+- **Task:** Generate PRISMA-2020 and PRISMA-S checklists and Methods boilerplate
+- **Status:** Completed
+- **Details:**
+  - `scripts/analysis/build_checklists.py` script was created and executed.
+  - `docs/checklists/PRISMA_2020_checklist.md`, `docs/checklists/PRISMA_S_checklist.md`, and `results/snippets/methods_boilerplate.md` were successfully generated.
+
+---
+
+## 2025-10-05 10:50
+
+- **Task:** Add new search entry and update all derived outputs
+- **Status:** Completed
+- **Details:**
+  - A new search entry was added to `data/search_log.csv`.
+  - `scripts/qa/validate_data.py`, `scripts/analysis/compute_prisma_counts.py`, `scripts/analysis/render_prisma_flow.py`, and `scripts/analysis/build_checklists.py` were re-executed to update all derived outputs.

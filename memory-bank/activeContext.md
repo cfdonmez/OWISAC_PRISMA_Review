@@ -141,3 +141,35 @@
 - Yapılan değişiklikleri `memory-bank/progress.md` dosyasına kaydetmek.
 - Değişiklikleri GitHub'a pushlamak.
 - Kullanıcıdan gelecek yeni talimatları beklemek.
+
+---
+
+## Now (2025-10-05 10:26)
+
+**Status:**
+- Adım 5 tamamlandı: PRISMA-2020 ve PRISMA-S checklistleri ile Methods boilerplate otomatik olarak üretildi.
+- `scripts/analysis/build_checklists.py` dosyası oluşturuldu ve çalıştırıldı.
+- `docs/checklists/PRISMA_2020_checklist.md`, `docs/checklists/PRISMA_S_checklist.md` ve `results/snippets/methods_boilerplate.md` dosyaları başarıyla oluşturuldu.
+
+**Blockers:**
+- Yok.
+
+**Next Actions:**
+- Yapılan değişiklikleri `memory-bank/progress.md` dosyasına kaydetmek.
+- Kullanıcıdan gelecek yeni talimatları beklemek.
+
+---
+
+## Now (2025-10-05 10:49)
+
+**Status:**
+- `data/search_log.csv` dosyasına yeni bir arama kaydı eklendi.
+- Veri doğrulama (`scripts/qa/validate_data.py`), PRISMA sayım hesaplama (`scripts/analysis/compute_prisma_counts.py`), PRISMA akış diyagramı oluşturma (`scripts/analysis/render_prisma_flow.py`) ve checklist oluşturma (`scripts/analysis/build_checklists.py`) betikleri tekrar çalıştırıldı.
+
+**Blockers:**
+- Yok.
+
+**Next Actions:**
+- Yapılan değişiklikleri `memory-bank/progress.md` dosyasına kaydetmek.
+- Değişiklikleri GitHub'a pushlamak.
+- Kullanıcıdan gelecek yeni talimatları beklemek.

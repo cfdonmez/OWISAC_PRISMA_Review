@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart TD
-  A[Records identified (databases and registers): n=128]:::box
+  A[Records identified (databases and registers): n=883]:::box
   R[Records removed before screening: duplicates 0, automated 0, other 0]:::box
   S[Records screened (title/abstract): n=1]:::box
   X[Records excluded (title/abstract): n=1]:::box
