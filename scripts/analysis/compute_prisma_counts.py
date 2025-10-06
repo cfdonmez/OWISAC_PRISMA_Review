@@ -108,29 +108,14 @@ included_qual = sum(1 for r in scr if (r.get("status") or "").strip() == "includ
 included_quant = sum(1 for r in scr if (r.get("status") or "").strip() == "included_quant")
 
 out = {
-    "identified": {
-        "db_registers_total": identified_total,
-        "other_sources_total": 0
-    },
-    "removed_before_screening": {
-        "duplicates": duplicates_removed,
-        "automated": automated_removed,
-        "other": 0
-    },
-    "screening": {
-        "records_screened_tiab": records_screened_tiab,
-        "records_excluded_tiab": records_excluded_tiab
-    },
-    "eligibility": {
-        "fulltexts_assessed": fulltexts_assessed,
-        "reports_sought_for_retrieval": reports_sought,
-        "reports_not_retrieved": reports_not_retrieved
-    },
-    "included": {
-        "studies_included_total": studies_included_total,
-        "qualitative": included_qual,
-        "quantitative": included_quant
-    }
+    "identified": identified_total,
+    "deduplicated": duplicates_removed,
+    "screened": records_screened_tiab,
+    "excluded_title_abs": records_excluded_tiab,
+    "fulltext_assessed": fulltexts_assessed,
+    "fulltext_excluded": reason_counts,
+    "included_qual": included_qual,
+    "included_quant": included_quant,
 }
 
 # Yaz: JSON

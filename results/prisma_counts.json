@@ -1,25 +1,13 @@
 {
-  "identified": {
-    "db_registers_total": 883,
-    "other_sources_total": 0
+  "identified": 883,
+  "deduplicated": 0,
+  "screened": 0,
+  "excluded_title_abs": 0,
+  "fulltext_assessed": 0,
+  "fulltext_excluded": {
+    "out_of_scope": 1,
+    "reason_unclassified": 1
   },
-  "removed_before_screening": {
-    "duplicates": 0,
-    "automated": 0,
-    "other": 0
-  },
-  "screening": {
-    "records_screened_tiab": 1,
-    "records_excluded_tiab": 1
-  },
-  "eligibility": {
-    "fulltexts_assessed": 3,
-    "reports_sought_for_retrieval": null,
-    "reports_not_retrieved": null
-  },
-  "included": {
-    "studies_included_total": 1,
-    "qualitative": 1,
-    "quantitative": 0
-  }
+  "included_qual": 0,
+  "included_quant": 0
 }
