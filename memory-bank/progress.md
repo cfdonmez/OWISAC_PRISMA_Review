@@ -120,3 +120,13 @@
   - Updated `activeContext.md` with the current task status.
   - Fixed the data processing pipeline by installing `jsonschema` and correcting the output format of `compute_prisma_counts.py`.
   - Successfully executed `scripts/run_pipeline.py` to confirm the entire data processing and manuscript generation pipeline is operational.
+
+---
+
+## 2025-10-06 11:45
+
+- **Task:** Document Data Extraction Workflow
+- **Status:** Completed
+- **Details:**
+  - Created a detailed `readme.md` file in `data/extraction/`.
+  - The new file outlines the purpose, workflow, key files, and coding rules for the data extraction phase, ensuring a standardized and transparent process.

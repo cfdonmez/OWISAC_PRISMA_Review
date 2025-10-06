@@ -188,3 +188,18 @@
 **Next Actions:**
 - Confirm runnable pipeline by executing `python scripts/run_pipeline.py`.
 - Log the completion of the initialization task into `memory-bank/progress.md`.
+
+---
+
+## Now (2025-10-06 11:45)
+
+**Status:**
+- Created `data/extraction/readme.md` to document the data extraction workflow.
+- The content was based on the project's main `README.md` and `review_structure.md`.
+
+**Blockers:**
+- None.
+
+**Next Actions:**
+- Log the completion of this task into `memory-bank/progress.md`.
+- Await next user instruction.
