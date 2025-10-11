@@ -1,9 +1,9 @@
 {
   "identified": 883,
   "deduplicated": 0,
-  "screened": 0,
+  "screened": 2,
   "excluded_title_abs": 0,
-  "fulltext_assessed": 0,
+  "fulltext_assessed": 2,
   "fulltext_excluded": {
     "out_of_scope": 1,
     "reason_unclassified": 1

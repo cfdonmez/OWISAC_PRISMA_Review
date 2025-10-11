@@ -191,15 +191,18 @@
 
 ---
 
-## Now (2025-10-06 11:45)
+## Now (2025-10-11 05:11)
 
 **Status:**
-- Created `data/extraction/readme.md` to document the data extraction workflow.
-- The content was based on the project's main `README.md` and `review_structure.md`.
+- Kullanıcının eklediği `NotebookJup.ipynb` dosyası başarıyla bulundu ve çalıştırıldı.
+- Veri kalitesi analizi tamamlandı: record_id benzersiz, ancak 23 yinelenen title tespit edildi.
+- Status dağılımı: 753 'completed', 2 'screened', 2 'fulltext_excluded'.
 
 **Blockers:**
-- None.
+- 23 adet yinelenen title (çoğu OW-ISAC/RIS-ISAC çalışmaları).
+- 100+ yıl alanı eksik (included_studies.csv'de '-' değerleri).
 
 **Next Actions:**
-- Log the completion of this task into `memory-bank/progress.md`.
-- Await next user instruction.
+- Yinelenen title sorununu çözmek için düzeltme stratejisi belirlemek.
+- Kullanıcıdan hangi title'ların korunacağına dair talimat almak.
+- Kullanıcıdan gelecek yeni talimatları beklemek.
