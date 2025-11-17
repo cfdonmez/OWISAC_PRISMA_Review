@@ -8,4 +8,4 @@
   - Reasons:
     - out_of_scope: **1**
     - reason_unclassified: **1**
-- Studies included in review: **607** (qual: 0, quant: 0)
+- Studies included in review: **0** (qual: 0, quant: 0)

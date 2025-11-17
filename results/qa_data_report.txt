@@ -730,7 +730,7 @@
 [data/screening_log.csv#731] invalid status: 'completed'
 [data/screening_log.csv#732] invalid status: 'completed'
 [data/screening_log.csv#733] invalid status: 'completed'
-[data/included_studies.csv] missing columns: ['record_id']
+Missing data/included_studies.csv
 
 ## Suggestions (normalize to reason_code)
 R004	non-optical; no OPA or RIS	=> not_optical
