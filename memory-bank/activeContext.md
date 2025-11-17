@@ -227,3 +227,15 @@
 - Proceed to **Stage 4: Eligibility Assessment** on 638 included studies.
 - Fix automated PRISMA counter to reflect actual progress.
 - Move forward with full-text review and data extraction.
+
+## Now
+
+**Status:** Gathering information about data extraction columns.
+**Blockers:** None.
+**Next Actions:** Read  to identify column names.
+
+## Now
+
+**Status:** Data extraction columns identified.
+**Blockers:** None.
+**Next Actions:** Provide data extraction columns to the user.

@@ -157,3 +157,19 @@
   - **Finding**: Automated counter shows incorrect 2/883 vs actual 638/733 screened records
   - **Next Phase**: Ready for Stage 4 - Eligibility Assessment on 638 included studies
   - **Action**: Fix automated PRISMA counter to reflect actual comprehensive screening progress
+
+---
+
+## 2025-11-18 12:43
+
+- **Task:** Repository Updates and Pipeline Refresh
+- **Status:** Completed
+- **Details:**
+  - **Pipeline Execution**: Successfully ran `python scripts/run_pipeline.py` 
+  - **PRISMA Counts**: Updated counts now show 2/883 (automated counter needs manual correction)
+  - **Synthesis Tables**: Built updated architecture and subgroup analysis tables
+  - **Dependencies**: Installed missing `pillow` package for PRISMA flow diagram generation
+  - **Flow Diagram**: Generated updated PRISMA flow diagram at `results/figures/prisma_flow.png`
+  - **Risk of Bias**: Updated RoB summary tables
+  - **Manuscript**: Rebuilt manuscript with latest data
+  - **Note**: Manual intervention still required to align automated counts with actual 638/733 screening progress
